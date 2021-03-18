@@ -7,8 +7,10 @@
 [![GitHub stars](https://img.shields.io/github/stars/gregstein/SenseiDE.svg)](https://github.com/gregstein/SenseiDE/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/gregstein/SenseiDE.svg)](https://github.com/gregstein/SenseiDE/network)
 
+**Unleash The Ultimate Performance from Age of Empires 2 Definitive with the help of SenSei DE.**
 <img src="https://i.imgur.com/b8M1e9j.jpg" width="450" >
-Unleash The Ultimate Performance from Age of Empires 2 Definitive with the help of SenSei DE. You can many things:
+
+Things you can do with Sensei DE
 
 - Disable/enable 38 hidden game effects and animations.
 - Shrink game resolution to any value from 10 to 100.
