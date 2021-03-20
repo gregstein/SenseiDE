@@ -8,14 +8,15 @@
 [![GitHub forks](https://img.shields.io/github/forks/gregstein/SenseiDE.svg)](https://github.com/gregstein/SenseiDE/network)
 
 **Unleash The Ultimate Performance from Age of Empires 2 Definitive with the help of SenSei DE.**
-<img src="https://i.imgur.com/b8M1e9j.jpg" width="450" >
+<img src="https://i.imgur.com/VtyWcAh.jpg" width="450" >
 
 Things you can do with Sensei DE
 
 - Disable/enable 38 hidden game effects and animations.
-- Shrink game resolution to any value from 10 to 100.
+- Shrink game resolution to any value from 10 to 100 (AoE2DE only allows 75%, 50%, 33%).
 - Disable Intro Videos
 - Optimize SplashScreen
 - Access to High Performance Graphics Profile
 - Install Your Mods as Offline And delete the online ones.
 - Manage all Mods across multiple steam accounts.
+- Optimal Windows Compatibility Settings
