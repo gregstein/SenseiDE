@@ -600,8 +600,10 @@ namespace DE_Sensei
             if(shrinktrack.Focus())
             {
                 shrinklbl.Text = shrinktrack.Value.ToString() + "%";
-                Task.Delay(1000);
+                Task.Delay(800);
+                pf.RegEdit("Game Render Scale", shrinktrack.Value, Microsoft.Win32.RegistryValueKind.DWord);
                 pf.SenseiREG("Shrink", shrinktrack.Value, Microsoft.Win32.RegistryValueKind.DWord);
+                
             }
             
         }
