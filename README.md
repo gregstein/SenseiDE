@@ -21,8 +21,14 @@ Things you can do with Sensei DE
 - Manage all Mods across multiple steam accounts.
 - Optimal Windows Compatibility Settings
 
+## Live Demo (Youtube)
+[![Improve Age of Empires 2 Definitive Edition Performance & Responsiveness](https://img.youtube.com/vi/WJIC8_myxi4/0.jpg)](https://www.youtube.com/watch?v=WJIC8_myxi4)
+
 ## Donations
-**You** want to show Your Love❤️ to This Project? 
-[![💞Support](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://streamlabs.com/gregstein_)
+
+Show Love❤️ to This Project? 
+
+
+[![Donate to project](https://i.imgur.com/MLApSEv.png)](https://streamlabs.com/gregstein_)
 
 Donators can request any features in the scoop of the project and will be added to the Hall of Fame of DE Replays Manager.
