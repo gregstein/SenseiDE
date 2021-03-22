@@ -20,3 +20,9 @@ Things you can do with Sensei DE
 - Install Your Mods as Offline And delete the online ones.
 - Manage all Mods across multiple steam accounts.
 - Optimal Windows Compatibility Settings
+
+## Donations
+**You** want to show Your Love❤️ to This Project? 
+[![💞Support](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://streamlabs.com/gregstein_)
+
+Donators can request any features in the scoop of the project and will be added to the Hall of Fame of DE Replays Manager.
