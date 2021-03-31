@@ -8,21 +8,29 @@
 [![GitHub forks](https://img.shields.io/github/forks/gregstein/SenseiDE.svg)](https://github.com/gregstein/SenseiDE/network)
 
 **Unleash The Ultimate Performance from Age of Empires 2 Definitive with the help of SenSei DE.**
-<img src="https://i.imgur.com/VtyWcAh.jpg" width="450" >
+<img src="https://user-images.githubusercontent.com/16618729/113196684-b1f16a80-925b-11eb-805d-2788944b95e5.jpg" width="450" >
 
 Things you can do with Sensei DE
 
-- Disable/enable 38 hidden game effects and animations.
+- Disable/enable 50 hidden game effects and animations.
 - Shrink game resolution to any value from 10 to 100 (AoE2DE only allows 75%, 50%, 33%).
 - Disable Intro Videos
 - Optimize SplashScreen
 - Access to High Performance Graphics Profile
 - Install Your Mods as Offline And delete the online ones.
-- Manage all Mods across multiple steam accounts.
+- Manage Your Mods (Install Offline, Export, Delete).
+- Disable Menu Effects.
+- Game Power Settings.
 - Optimal Windows Compatibility Settings
+- Manage Hotkeys (Install, Set default profile)
 
-## Donations
-**You** want to show Your Love❤️ to This Project? 
-[![💞Support](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://streamlabs.com/gregstein_)
 
-Donators can request any features in the scoop of the project and will be added to the Hall of Fame of DE Replays Manager.
+## Live Demo (Youtube)
+[![Improve Age of Empires 2 Definitive Edition Performance & Responsiveness](https://img.youtube.com/vi/WJIC8_myxi4/0.jpg)](https://www.youtube.com/watch?v=WJIC8_myxi4)
+
+## Support
+
+Show Love❤️? 
+[![Donate to project](https://i.imgur.com/MLApSEv.png)](https://streamlabs.com/gregstein_)
+
+Donators can request any features in the scoop of the project and will be added to the Hall of Fame of Sensei DE.
