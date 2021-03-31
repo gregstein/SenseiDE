@@ -5,15 +5,20 @@ using System.Drawing;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using System.Security.AccessControl;
+using System.Security.Principal;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DevComponents.DotNetBar;
+using DevComponents.DotNetBar.Controls;
 using Ionic.Zip;
 using Microsoft.Win32;
 using Steamworks;
+
 
 namespace DE_Sensei
 {
@@ -24,8 +29,30 @@ namespace DE_Sensei
         perfCLASS pf = new perfCLASS();
         public string dePATH = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Games\Age of Empires 2 DE";
         public Dictionary<string, string> ModMenu = new Dictionary<string, string>();
-        public string saveDirectoryPath = "";
-        private bool done = false;
+        private string saveDirectoryPath = "";
+        private string UserDataDir = "";
+        private string UserSteamID = "";
+        private string DecompTMP;
+        private static string zoomPhrase = @"[Default Zoom:$]+(\d+)";
+        private static string zoomPhrase2 = @"Default Zoom:(\d+)";
+        List<string> aopDICT = new List<string>()
+{
+"Health Bar Visibility:1",
+"Health Bar Visibility:0",
+"Health Bars:1",
+"Health Bars:0",
+"Click Drag Scroll Button:1", 
+"Click Drag Scroll Button:0", 
+"VillagerDoubleClick:1", 
+"VillagerDoubleClick:0",
+"ZoomToCursor:1", 
+"ZoomToCursor:0", 
+"ings:0", 
+"ings:1",
+"AppendGroups:0",
+"AppendGroups:1",
+"Default Zoom"
+};
         public Sensei()
         {
 
@@ -34,18 +61,17 @@ namespace DE_Sensei
             if (!pf.senseiEXISTS())
                 pf.senseiBORN();
 
-            if(!pf.KidsHERE())
-                pf.senseiBORN();
+            //if(!pf.KidsHERE())
+            //    pf.senseiBORN();
             
-            RefreshMods();
+            
             pf.RetSETTINGS("Splash Screen Pixelate", splashswitch);
             pf.RetSETTINGS2("Shrink", shrinktrack, shrinklbl);
             pf.RetSETTINGS("Skip Intro", introswitch);
             pf.RetSETTINGS("Disable Effects", effectswitch);
             pf.RetSETTINGS3("Performance", perfcb);
+            pf.RetSETTINGS("Menu Effects",menueff);
             
-
-            //Decompress(new FileInfo(@"C:\Users\shock\Games\Age of Empires 2 DE\76561198079200175\profile\Player.nfp"));
 
         }
         
@@ -63,27 +89,31 @@ namespace DE_Sensei
                 {
 
                 }
+
             }
 
             return this.saveDirectoryPath;
         }
-        //public static void Decompress(FileInfo fileToDecompress)
-        //{
-        //    using (FileStream originalFileStream = fileToDecompress.OpenRead())
-        //    {
-        //        string currentFileName = fileToDecompress.FullName;
-        //        string newFileName = currentFileName.Remove(currentFileName.Length - fileToDecompress.Extension.Length);
-
-        //        using (FileStream decompressedFileStream = File.Create(newFileName))
-        //        {
-        //            using (DeflateStream decompressionStream = new DeflateStream(originalFileStream, CompressionMode.Decompress))
-        //            {
-        //                decompressionStream.CopyTo(decompressedFileStream);
-        //                MessageBoxEx.Show("Decompressed: {0}", fileToDecompress.Name);
-        //            }
-        //        }
-        //    }
-        //}
+        public string UserDataDirectory()
+        {
+            if(this.UserDataDir == "")
+            {
+                string Buffer;
+                var idUSR = SteamUser.GetUserDataFolder(out Buffer, 260);
+                return Buffer.ToString().Replace(@"\local", "");
+            }
+            return this.UserDataDir;
+        }
+        public string _UserSteamID()
+        {
+            if (this.UserSteamID == "")
+            {
+                
+                var idUSR = SteamUser.GetSteamID();
+                return idUSR.ToString();
+            }
+            return this.UserSteamID;
+        }
         private void RemoveDirectories(string strpath)
         {
             ThreadPool.QueueUserWorkItem((o) =>
@@ -93,7 +123,7 @@ namespace DE_Sensei
                     
                         DirectoryInfo dirInfo = new DirectoryInfo(strpath);
                     var files = dirInfo.GetFiles();
-                    //I assume your code is inside a Form, else you need a control to do this invocation;
+
                     this.BeginInvoke(new Action(() =>
                     {
                         pBAR.Minimum = 0;
@@ -105,7 +135,7 @@ namespace DE_Sensei
                     foreach (FileInfo file in files)
                     {
                         file.Delete();
-                        this.BeginInvoke(new Action(() => pBAR.PerformStep())); //I assume your code is inside a Form, else you need a control to do this invocation;
+                        this.BeginInvoke(new Action(() => pBAR.PerformStep())); 
 
                     }
 
@@ -122,12 +152,100 @@ namespace DE_Sensei
                         
                         dir.Delete(true);
 
-                        this.BeginInvoke(new Action(() => pBAR.PerformStep())); //I assume your code is inside a Form, else you need a control to do this invocation;
+                        this.BeginInvoke(new Action(() => pBAR.PerformStep())); 
                     }
                   
             }
             }, null);
 
+        }
+        public void Compress(FileInfo fileToDecompress)
+        {
+
+            
+                using (FileStream originalFileStream = fileToDecompress.OpenRead())
+                {
+                    
+                        using (FileStream compressedFileStream = File.Create(fileToDecompress.FullName + ".cm"))
+                        {
+                            using (DeflateStream compressionStream = new DeflateStream(compressedFileStream, CompressionMode.Compress))
+                            {
+                                originalFileStream.CopyTo(compressionStream);
+                            }
+                        }
+
+                        FileInfo info = new FileInfo(fileToDecompress + ".cm");
+                        
+                   
+                }
+        }
+        public void Decompress(FileInfo fileToDecompress)
+        {
+            using (FileStream originalFileStream = fileToDecompress.OpenRead())
+            {
+                string currentFileName = fileToDecompress.FullName;
+                string newFileName = currentFileName.Remove(currentFileName.Length - fileToDecompress.Extension.Length) + ".tmp";
+
+                using (FileStream decompressedFileStream = File.Create(newFileName))
+                {
+                    using (DeflateStream decompressionStream = new DeflateStream(originalFileStream, CompressionMode.Decompress))
+                    {
+                        DecompTMP = newFileName;
+                        decompressionStream.CopyTo(decompressedFileStream);
+                    }
+                }
+            }
+            
+        }
+        public int FindBytes(byte[] src, byte[] find)
+        {
+            int index = -1;
+            int matchIndex = 0;
+            // handle the complete source array
+            for (int i = 0; i < src.Length; i++)
+            {
+                if (src[i] == find[matchIndex])
+                {
+                    if (matchIndex == (find.Length - 1))
+                    {
+                        index = i - matchIndex;
+                        break;
+                    }
+                    matchIndex++;
+                }
+                else if (src[i] == find[0])
+                {
+                    matchIndex = 1;
+                }
+                else
+                {
+                    matchIndex = 0;
+                }
+
+            }
+            return index;
+        }
+
+        public byte[] ReplaceBytes(byte[] src, byte[] search, byte[] repl)
+        {
+            byte[] dst = null;
+            int index = FindBytes(src, search);
+            if (index >= 0)
+            {
+                dst = new byte[src.Length - search.Length + repl.Length];
+                // before found array
+                Buffer.BlockCopy(src, 0, dst, 0, index);
+                // repl copy
+                Buffer.BlockCopy(repl, 0, dst, index, repl.Length);
+                // rest of src array
+                Buffer.BlockCopy(
+                    src,
+                    index + search.Length,
+                    dst,
+                    index + repl.Length,
+                    src.Length - (index + search.Length));
+            }
+            return dst;
         }
         private void Sensei_Load(object sender, EventArgs e)
         {
@@ -135,7 +253,12 @@ namespace DE_Sensei
             int _sh = this.Height;
             this.MinimumSize = new Size(_sw, _sh);
             this.MaximumSize = new Size(_sw, _sh);
-            //Task.Factory.StartNew(path => Directory.Delete((string)path, true), @"C:\Users\shock\Desktop\shithere");
+            //byte[] test = File.ReadAllBytes(@"C:\Users\shock\Games\Age of Empires 2 DE\76561198079200175\profile\Player").Skip(0x17).Take(150).ToArray();
+            //MessageBox.Show(System.Text.Encoding.UTF8.GetString(test));
+            Decompress(new FileInfo(@"C:\Users\shock\Games\Age of Empires 2 DE\76561198079200175\profile\AdditionalOptions.aop"));
+            //pf.HKIwriter(@"C:\Users\shock\Games\Age of Empires 2 DE\76561198079200175\profile\PlayerDefault");
+
+
         }
 
         private async void perfcb_SelectedValueChanged(object sender, EventArgs e)
@@ -226,12 +349,12 @@ namespace DE_Sensei
                 MessageBoxEx.Show("Your AoE2 Profile Folder Do Not Exist! Try to Run AoE2 DE Then Try Again!", "Alert!");
                 return;
             }
-            foreach (DirectoryInfo subdirectory in subdirectoryEntries)
-            {
+            //foreach (DirectoryInfo subdirectory in subdirectoryEntries)
+            //{
 
-                if (pf.IsDigitsOnly(subdirectory.FullName.Replace(dePATH + "\\", "")) && subdirectory.FullName.Length > 4 && subdirectory.FullName.Replace(dePATH + "\\", "") != "0")
-                {
-                    var allmods = new DirectoryInfo(subdirectory.FullName + @"\mods\subscribed").GetDirectories("*", SearchOption.TopDirectoryOnly).OrderByDescending(x => x.LastWriteTime);
+            //    if (pf.IsDigitsOnly(subdirectory.FullName.Replace(dePATH + "\\", "")) && subdirectory.FullName.Length > 4 && subdirectory.FullName.Replace(dePATH + "\\", "") != "0")
+            //    {
+                    var allmods = new DirectoryInfo(dePATH + @"\" + _UserSteamID() + @"\mods\subscribed").GetDirectories("*", SearchOption.TopDirectoryOnly).OrderByDescending(x => x.LastWriteTime);
                     foreach (DirectoryInfo dirmod in allmods)
                     {
 
@@ -244,13 +367,11 @@ namespace DE_Sensei
 
                     }
 
-
-
-                }
-            }
+            //    }
+            //}
             //set mod counter
-            modcount.Text = listsubmitee.Items.Count.ToString();
-            itemselec.Text = listsubmitee.SelectedItems.Count.ToString();
+            modcountB.Text = listsubmitee.Items.Count.ToString();
+            itemselecB.Text = listsubmitee.SelectedItems.Count.ToString();
         }
         private void modswitch_ValueChanged(object sender, EventArgs e)
         {
@@ -264,8 +385,8 @@ namespace DE_Sensei
             {
                 listsubmitee.Items.Clear();
                 //clear mod counter
-                modcount.Text = "0";
-                itemselec.Text = "0";
+                modcountB.Text = "0";
+                itemselecB.Text = "0";
                 pf.SenseiREG("Mods Manager", 0, Microsoft.Win32.RegistryValueKind.DWord);
             }
         }
@@ -346,7 +467,7 @@ namespace DE_Sensei
 
         private void listsubmitee_SelectedIndexChanged(object sender, EventArgs e)
         {
-            itemselec.Text = listsubmitee.SelectedItems.Count.ToString();
+            itemselecB.Text = listsubmitee.SelectedItems.Count.ToString();
         }
 
         private void listsubmitee_ItemClick(object sender, EventArgs e)
@@ -356,14 +477,16 @@ namespace DE_Sensei
 
         private void listsubmitee_ItemAdded(object sender, EventArgs e)
         {
-            modcount.Text = listsubmitee.Items.Count.ToString();
+            modcountB.Text = listsubmitee.Items.Count.ToString();
         }
 
         private async void TickWorks_Tick(object sender, EventArgs e)
         {
             try
             {
-                if (!SteamAPI.Init())
+
+               
+                    if (!SteamAPI.Init())
                 {
                     if (SteamAPI.IsSteamRunning())
                     {
@@ -399,8 +522,17 @@ namespace DE_Sensei
                         TickWorks.Stop();
                     }
                     //Retrieve game folder
-                    
+                    Additional.Enabled = true;
+                    modsTAB.Enabled = true;
+                    //File.WriteAllBytes("file.txt", fileContents);
                     SaveDirectoryPath();
+                    if (pf.CheckGamePower(saveDirectoryPath + @"\AoE2DE_s.exe"))
+                        highPERFORMANCE.Checked = true;
+                    else if (!pf.CheckGamePower(saveDirectoryPath + @"\AoE2DE_s.exe"))
+                        powerSAVING.Checked = true;
+                    else
+                    { }
+
                     Thread.Sleep(100);
                     //Enable Sensei features
                     //perfcb.Enabled = true;
@@ -410,10 +542,10 @@ namespace DE_Sensei
                     //introswitch.Enabled = true;
                     //effectswitch.Enabled = true;
 
-                    foreach (Control ctrl in flowLayoutPanel1.Controls)
-                    {
+                    foreach (Control ctrl in flowLayoutPanel2.Controls)
                         ctrl.Enabled = true;
-                    }
+                    foreach (Control ctrl in flowLayoutPanel3.Controls)
+                        ctrl.Enabled = true;
                     //Retrieve settings
                     pf.CheckLayers(saveDirectoryPath + @"\AoE2DE_s.exe");
 
@@ -431,11 +563,11 @@ namespace DE_Sensei
                 steamSTATUS.Image = DE_Sensei.Properties.Resources.steam_red;
 
             }
-        }
 
+        }
         private void selectmods_CheckedChanged(object sender, EventArgs e)
         {
-            if(selectmods.Checked == true && listsubmitee.Items.Count > 0)
+            if(selectmodsB.Checked == true && listsubmitee.Items.Count > 0)
             {
                 for (int i = 0; i < listsubmitee.Items.Count; i++)
                 {
@@ -445,7 +577,7 @@ namespace DE_Sensei
                 //foreach(var mod in listsubmitee.Items)
                 //    mod.SetSelected
             }
-            else if(selectmods.Checked == false && listsubmitee.Items.Count > 0)
+            else if(selectmodsB.Checked == false && listsubmitee.Items.Count > 0)
             {
                 for (int i = 0; i < listsubmitee.Items.Count; i++)
                 {
@@ -474,21 +606,30 @@ namespace DE_Sensei
 
         private void efconfig_Click(object sender, EventArgs e)
         {
-            
-            Main mn = new Main();
-            mn.GetDEPath = SaveDirectoryPath();
-            mn.GetGames = dePATH;
-            mn.Show();
+            if(SteamAPI.Init())
+            {
+                Main mn = new Main();
+                mn.GetDEPath = SaveDirectoryPath();
+                mn.GetGames = dePATH;
+                mn.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sign into your steam client to use this feature.", "Steam not running!");
+            }
+           
         }
 
         private void efconfig_MouseHover(object sender, EventArgs e)
         {
-            efconfig.Image = Properties.Resources.gear2;
+            if(SteamAPI.Init())
+                efconfig.Image = Properties.Resources.gear2;
         }
 
         private void efconfig_MouseLeave(object sender, EventArgs e)
         {
-            efconfig.Image = Properties.Resources.gear;
+            if (SteamAPI.Init())
+                efconfig.Image = Properties.Resources.gear;
         }
 
         private void introswitch_ValueChanged(object sender, EventArgs e)
@@ -714,6 +855,7 @@ namespace DE_Sensei
                 pBAR.Value = 0;
                 pBAR2.Value = 0;
             }
+           
         }
         private void exportit_Click(object sender, EventArgs e)
         {
@@ -804,6 +946,512 @@ namespace DE_Sensei
                 pf.EXEsettings(EXEpath, EXEinfo.Replace(@" HIGHDPIAWARE", ""), Microsoft.Win32.RegistryValueKind.String);
             else if (!runas.Checked && EXEinfo.StartsWith(@"~ HIGHDPIAWARE"))
                 pf.EXEsettings(EXEpath, @"~" + EXEinfo.Replace(@"~ HIGHDPIAWARE", ""), Microsoft.Win32.RegistryValueKind.String);
+        }
+
+        private void superTabControl1_SelectedTabChanged(object sender, SuperTabStripSelectedTabChangedEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void powerSAVING_CheckedChanged(object sender, EventArgs e)
+        {
+            if (powerSAVING.Checked)
+            {
+                pf.RegEdit(saveDirectoryPath + @"\AoE2DE_s.exe", "GpuPreference=1;", RegistryValueKind.String, @"Software\Microsoft\DirectX\UserGpuPreferences");
+                powerSTATE.ColorTable = DevComponents.DotNetBar.Controls.ePanelColorTable.Red;
+            }
+               
+            
+        }
+
+        private void highPERFORMANCE_CheckedChanged(object sender, EventArgs e)
+        {
+            if (highPERFORMANCE.Checked)
+            {
+                pf.RegEdit(saveDirectoryPath + @"\AoE2DE_s.exe", "GpuPreference=2;", RegistryValueKind.String, @"Software\Microsoft\DirectX\UserGpuPreferences");
+                powerSTATE.ColorTable = DevComponents.DotNetBar.Controls.ePanelColorTable.Green;
+            }
+                
+        }
+        void zip_ExtractProgress(object sender, ExtractProgressEventArgs e)
+        {
+            if (e.TotalBytesToTransfer > 0)
+            {
+                pBAR.Value = Convert.ToInt32(100 * e.BytesTransferred / e.TotalBytesToTransfer);
+            }
+        }
+        private void menueff_ValueChanged(object sender, EventArgs e)
+        {
+            if(menueff.Focus())
+            {
+            if(menueff.ValueObject.ToString() == "N")
+            {
+                try
+                {
+                    menueff.Enabled = false;
+                    File.WriteAllBytes(Path.Combine(Path.GetTempPath(), "Defaultxaml"), Properties.Resources.DF);
+                using(Ionic.Zip.ZipFile zip = Ionic.Zip.ZipFile.Read(Path.Combine(Path.GetTempPath(), "Defaultxaml")))
+                {
+                    zip.ExtractProgress +=
+               new EventHandler<ExtractProgressEventArgs>(zip_ExtractProgress);
+                   zip.ExtractAll(saveDirectoryPath + @"\resources\_common\wpfg\", ExtractExistingFileAction.OverwriteSilently);
+                }
+                    pBAR.Value = 0;
+                    pf.SenseiREG("Menu Effects", 0, Microsoft.Win32.RegistryValueKind.DWord);
+                    menueff.Enabled = true;
+                }
+                catch (SystemException ex)
+                {
+                    MessageBox.Show(ex.InnerException.ToString());
+                    menueff.Enabled = true;
+                }
+            }
+            else if (menueff.ValueObject.ToString() == "Y")
+            {
+                try
+                {
+                    menueff.Enabled = false;
+                    File.WriteAllBytes(Path.Combine(Path.GetTempPath(), "Optimalxaml"), Properties.Resources.MO);
+                    using (Ionic.Zip.ZipFile zip = Ionic.Zip.ZipFile.Read(Path.Combine(Path.GetTempPath(), "Optimalxaml")))
+                    {
+                        zip.ExtractProgress +=
+                   new EventHandler<ExtractProgressEventArgs>(zip_ExtractProgress);
+                        zip.ExtractAll(saveDirectoryPath + @"\resources\_common\wpfg\", ExtractExistingFileAction.OverwriteSilently);
+                    }
+                    pBAR.Value = 0;
+                    pf.SenseiREG("Menu Effects", 1, Microsoft.Win32.RegistryValueKind.DWord);
+                    menueff.Enabled = true;
+                }
+                catch(SystemException ex)
+                {
+                    MessageBox.Show(ex.InnerException.ToString());
+                    menueff.Enabled = true;
+                }
+                
+            }
+            }
+        }
+
+        private void flowLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void openHOTKEYFOLDER_Click(object sender, EventArgs e)
+        {
+            Process.Start(dePATH + @"\" + _UserSteamID() + @"\profile");
+        }
+
+        private void importHOTKEYFILE_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog importfile = new OpenFileDialog();
+            importfile.Filter = "Hotkeys Profile HKI|*.hki";
+            importfile.Title = "Select a .hki file To Import";
+            importfile.ShowDialog();
+
+            // If the file name is not an empty string open it for saving.  
+            if (importfile.FileName != "")
+            {
+                string idNAME = SteamFriends.GetFriendPersonaName(new CSteamID(ulong.Parse(_UserSteamID())));
+                //Deflating hotkey file
+                Decompress(new FileInfo(dePATH + @"\" + _UserSteamID() + @"\profile\Player.nfp"));
+                //Edit hotkey file
+                string hkiN = Regex.Replace(idNAME, @"[^0-9a-zA-Z]+", "") + @"-" + DateTime.Now.Year.ToString() + ".hki";
+                pf.HKIwriter(DecompTMP, hkiN);
+                //Compress hotkey file
+                Compress(new FileInfo(DecompTMP));
+                //move hotkey file back
+                if (File.Exists(dePATH + @"\" + _UserSteamID() + @"\profile\" + hkiN))
+                    File.Delete(dePATH + @"\" + _UserSteamID() + @"\profile\" + hkiN);
+
+                File.Copy(DecompTMP + ".cm", dePATH + @"\" + _UserSteamID() + @"\profile\Player.nfp",true);
+                File.Copy(importfile.FileName, dePATH + @"\" + _UserSteamID() + @"\profile\" + hkiN);
+                //Clear User data cloud files
+                try
+                {
+                    if (Directory.Exists(UserDataDirectory() + @"\remote"))
+                        Directory.Delete(UserDataDirectory() + @"\remote",true);
+
+                }
+                catch (SystemException)
+                {
+                    //null
+                }
+                try
+                {
+                    if (File.Exists(UserDataDirectory() + @"\remotecache.vdf"))
+                        File.Delete(UserDataDirectory() + @"\remotecache.vdf");
+
+                    
+                }
+                catch(SystemException)
+                {
+                    //null
+                }
+               
+                //Clear temp files
+                if (File.Exists(dePATH + @"\" + _UserSteamID() + @"\profile\Player.tmp"))
+                    File.Delete(dePATH + @"\" + _UserSteamID() + @"\profile\Player.tmp");
+
+                if (File.Exists(dePATH + @"\" + _UserSteamID() + @"\profile\Player.tmp.cm"))
+                    File.Delete(dePATH + @"\" + _UserSteamID() + @"\profile\Player.tmp.cm");
+                //Restart Steam
+                MessageBox.Show("Success! Your hotkey name is: " + hkiN + "\n\n" + "[+] STEAM will restart." + "\n" + "[+] SENSEI DE will Close." + "\n\n It's important for applying your new hotkey profile: " + hkiN, "Imported Successfully! Initiating Steam Restart");
+                var process = Process.GetProcessesByName("steam")[0];
+                process.Kill();
+                var path = process.MainModule.FileName;
+                Process.Start(path);
+                Application.Exit();
+
+            }
+            }
+        public static string ReadNFP(string path)
+        {
+            using (BinaryReader b = new BinaryReader(File.Open(path, FileMode.Open)))
+            {
+                // Variables for our position.
+                int pos = 24;
+                int required = 282;
+                // Seek required position.
+                b.BaseStream.Seek(pos, SeekOrigin.Begin);
+                // Read the next bytes.
+                byte[] by = b.ReadBytes(required);
+                // Read HKI profile string and store byte piece.
+                var HKIname = System.Text.Encoding.ASCII.GetString(by).Trim();
+                return HKIname;
+            }
+        }
+        private void RefreshHotkeys()
+        {
+            if (!Directory.Exists(dePATH + @"\" + _UserSteamID() + @"\profile"))
+                return;
+            if (!File.Exists(dePATH + @"\" + _UserSteamID() + @"\profile\Player.nfp"))
+            {
+                MessageBox.Show("Player.nfp not found! Please close Sensei DE and Start AOE2 DE through Steam to generate the file.", "Player nfp not found!");
+                return;
+            }
+                
+
+            hotkeyLIST.Items.Clear();
+            foreach (var hki in Directory.GetFiles(dePATH + @"\" + _UserSteamID() + @"\profile", "*.hki"))
+            {
+                DevComponents.DotNetBar.ComboBoxItem item = new DevComponents.DotNetBar.ComboBoxItem();
+                item.Text = Path.GetFileNameWithoutExtension(hki);
+                hotkeyLIST.Items.Add(item);
+            }
+            Decompress(new FileInfo(dePATH + @"\" + _UserSteamID() + @"\profile\Player.nfp"));
+            string los = ReadNFP(dePATH + @"\" + _UserSteamID() + @"\profile\Player.tmp");
+            hotkeyLIST.SelectedIndex = hotkeyLIST.FindStringExact(Regex.Replace(los, @"[^\w\.@-]", string.Empty).Replace(".hki", ""));
+        }
+        public static Match MatchesBOX(string option, string textfile)
+        {
+            Match m = Regex.Match(textfile, option + @"(\d+)");
+            return m;
+        }
+        private void Additional_Click(object sender, EventArgs e)
+        {
+            RefreshHotkeys();
+            //Decompress aop
+            Decompress(new FileInfo(dePATH + @"\" + _UserSteamID() + @"\profile\AdditionalOptions.aop"));
+
+            string text = File.ReadAllText(dePATH + @"\" + _UserSteamID() + @"\profile\AdditionalOptions.tmp");
+            Match mHEALTHV = MatchesBOX("Health Bar Visibility:", text);
+            Match mHEALTHB = MatchesBOX("Health Bars:", text);
+            Match mVILLAGERD = MatchesBOX("VillagerDoubleClick:", text);
+            Match mClickDRAGS = MatchesBOX("Click Drag Scroll Button:", text);
+            Match mZOOMTOC = MatchesBOX("ZoomToCursor:", text);
+            Match mINGS = MatchesBOX("ings:", text);
+            Match mSHIFTA = MatchesBOX("ShiftAppendGroups:", text);
+            Match mZOOMD = MatchesBOX("Default Zoom:", text);
+
+
+            if (mHEALTHV.Success)
+            {
+                
+                if (mHEALTHV.Groups[1].Value == "1")
+                    nohealthBARS.Checked = false;
+                else if (mHEALTHV.Groups[1].Value == "0")
+                    nohealthBARS.Checked = true;
+
+            }
+            if (mHEALTHB.Success)
+            {
+                if (mHEALTHB.Groups[1].Value == "1")
+                    nohealthBARS.Checked = false;
+                else if (mHEALTHB.Groups[1].Value == "0")
+                    nohealthBARS.Checked = true;
+
+            }
+            if (mVILLAGERD.Success)
+            {
+                if (mVILLAGERD.Groups[1].Value == "1")
+                    villagerDOUBLECLICK.Checked = true;
+                else if (mVILLAGERD.Groups[1].Value == "0")
+                    villagerDOUBLECLICK.Checked = false;
+
+            }
+            if (mClickDRAGS.Success)
+            {
+                if (mClickDRAGS.Groups[1].Value == "1")
+                    noclickDRAG.Checked = false;
+                else if (mClickDRAGS.Groups[1].Value == "0")
+                    noclickDRAG.Checked = true;
+
+            }
+            if (mZOOMTOC.Success)
+            {
+                if (mZOOMTOC.Groups[1].Value == "1")
+                    noingameZOOM.Checked = false;
+                else if (mZOOMTOC.Groups[1].Value == "0")
+                    noingameZOOM.Checked = true;
+
+            }
+            if (mINGS.Success)
+            {
+               
+
+                if (mINGS.Groups[1].Value == "1")
+                    confirmDELETION.Checked = true;
+                else if (mINGS.Groups[1].Value == "0")
+                    confirmDELETION.Checked = false;
+
+            }
+            if (mSHIFTA.Success)
+            {
+               
+
+                if (mSHIFTA.Groups[1].Value == "1")
+                    shiftAPPEND.Checked = true;
+                else if (mSHIFTA.Groups[1].Value == "0")
+                    shiftAPPEND.Checked = false;
+
+            }
+            if (mZOOMD.Success)
+            {
+                zoomSLIDER.Value = Int32.Parse(mZOOMD.Groups[1].Value);
+
+            }
+            Thread.Sleep(100);
+            File.Delete(dePATH + @"\" + _UserSteamID() + @"\profile\AdditionalOptions.tmp");
+        }
+
+        private void refreshHOTKEYS_Click(object sender, EventArgs e)
+        {
+            RefreshHotkeys();
+        }
+
+        private void hotkeyLIST_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(hotkeyLIST.Focused)
+            {
+
+            
+            DialogResult dlg = MessageBox.Show("Set < " + hotkeyLIST.SelectedItem.ToString() + ".hki" + " > As Your Default Hotkey Preset?\n [+] Steam will restart to apply this change.", "Set Default Hotkey", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(dlg == DialogResult.Yes)
+                {
+            string idNAME = SteamFriends.GetFriendPersonaName(new CSteamID(ulong.Parse(_UserSteamID())));
+            //Deflating hotkey file
+            Decompress(new FileInfo(dePATH + @"\" + _UserSteamID() + @"\profile\Player.nfp"));
+            //Edit hotkey file
+            string hkiN = hotkeyLIST.SelectedItem.ToString() + ".hki";
+            pf.HKIwriter(DecompTMP, hkiN);
+            //Compress hotkey file
+            Compress(new FileInfo(DecompTMP));
+
+            File.Copy(DecompTMP + ".cm", dePATH + @"\" + _UserSteamID() + @"\profile\Player.nfp", true);
+            
+            //Clear User data cloud files
+            try
+            {
+                if (Directory.Exists(UserDataDirectory() + @"\remote"))
+                    Directory.Delete(UserDataDirectory() + @"\remote", true);
+
+            }
+            catch (SystemException)
+            {
+                //null
+            }
+            try
+            {
+                if (File.Exists(UserDataDirectory() + @"\remotecache.vdf"))
+                    File.Delete(UserDataDirectory() + @"\remotecache.vdf");
+
+
+            }
+            catch (SystemException)
+            {
+                //null
+            }
+
+            //Clear temp files
+            if (File.Exists(dePATH + @"\" + _UserSteamID() + @"\profile\Player.tmp"))
+                File.Delete(dePATH + @"\" + _UserSteamID() + @"\profile\Player.tmp");
+
+            if (File.Exists(dePATH + @"\" + _UserSteamID() + @"\profile\Player.tmp.cm"))
+                File.Delete(dePATH + @"\" + _UserSteamID() + @"\profile\Player.tmp.cm");
+            //Restart Steam
+            MessageBox.Show("Success! Your hotkey name is: " + hkiN + "\n\n" + "[+] STEAM will restart." + "\n" + "[+] SENSEI DE will Close." + "\n\n It's important for applying your new hotkey profile: " + hkiN, "Imported Successfully! Initiating Steam Restart");
+            var process = Process.GetProcessesByName("steam");
+            var process2 = Process.GetProcessesByName("steamwebhelper");
+                    string steamp = null;
+                    foreach (var p in process)
+                    {
+                        p.Kill();
+                        var path = p.MainModule.FileName;
+                        steamp = path;
+                    }
+                    if (steamp != null)
+                        Process.Start(steamp);
+
+                    Application.Exit();
+                }
+                else 
+                {
+                    if (File.Exists(dePATH + @"\" + _UserSteamID() + @"\profile\Player.tmp"))
+                        File.Delete(dePATH + @"\" + _UserSteamID() + @"\profile\Player.tmp");
+                }
+                Thread.Sleep(100);
+                if (File.Exists(dePATH + @"\" + _UserSteamID() + @"\profile\Player.tmp"))
+                    File.Delete(dePATH + @"\" + _UserSteamID() + @"\profile\Player.tmp");
+
+            }
+        }
+
+        private void labelX14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void zoomSLIDER_ValueChanged(object sender, EventArgs e)
+        {
+            zoomPERC.Text = zoomSLIDER.Value.ToString() + "%";
+        }
+
+        private void applyEXP_Click(object sender, EventArgs e)
+        {
+            //Decompress aop
+            Decompress(new FileInfo(dePATH + @"\" + _UserSteamID() + @"\profile\AdditionalOptions.aop"));
+            //Find and replace values
+            if (File.Exists(dePATH + @"\" + _UserSteamID() + @"\profile\AdditionalOptions.tmp"))
+            {
+                string text = File.ReadAllText(dePATH + @"\" + _UserSteamID() + @"\profile\AdditionalOptions.tmp", Encoding.UTF8);
+                
+                Match m = Regex.Match(text, zoomPhrase2);
+                if (nohealthBARS.Checked)
+                {
+                    text = text.Replace("Health Bar Visibility:1", "Health Bar Visibility:0");
+                    text = text.Replace("Health Bars:1", "Health Bars:0");
+                } 
+                else
+                {
+                    text = text.Replace("Health Bar Visibility:0", "Health Bar Visibility:1");
+                    text = text.Replace("Health Bars:0", "Health Bars:1");
+                }
+
+                if (noclickDRAG.Checked)
+                    text = text.Replace("Click Drag Scroll Button:1", "Click Drag Scroll Button:0");
+                else
+                    text = text.Replace("Click Drag Scroll Button:0", "Click Drag Scroll Button:1");
+
+                if (villagerDOUBLECLICK.Checked)
+                    text = text.Replace("VillagerDoubleClick:0", "VillagerDoubleClick:1");
+                else
+                    text = text.Replace("VillagerDoubleClick:1", "VillagerDoubleClick:0");
+
+                if (noingameZOOM.Checked)
+                    text = text.Replace("ZoomToCursor:1", "ZoomToCursor:0");
+                else
+                    text = text.Replace("ZoomToCursor:0", "ZoomToCursor:1");
+
+                if (confirmDELETION.Checked)
+                    text = text.Replace("ings:0", "ings:1");
+                else
+                    text = text.Replace("ings:1", "ings:0");
+
+                if (shiftAPPEND.Checked)
+                    text = text.Replace("ShiftAppendGroups:0", "ShiftAppendGroups:1");
+                else
+                    text = text.Replace("ShiftAppendGroups:1", "ShiftAppendGroups:0");
+                if(m.Success)
+                {    
+                    text = Regex.Replace(text, zoomPhrase2, "Default Zoom:" + zoomPERC.Text.Replace("%",""));
+                    
+                }
+                //text = Regex.Replace(text, @"\<ref.*?\</ref\>", "");
+
+                File.WriteAllText(dePATH + @"\" + _UserSteamID() + @"\profile\AdditionalOptions.tmp.txt", text);
+            }
+
+           
+            //Compress aop
+            Compress(new FileInfo(dePATH + @"\" + _UserSteamID() + @"\profile\AdditionalOptions.tmp.txt"));
+            //Override aop
+            string aopfile = dePATH + @"\" + _UserSteamID() + @"\profile\AdditionalOptions.aop";
+            //FileAttributes attrs = File.GetAttributes(aopfile);
+            //if (attrs.HasFlag(FileAttributes.ReadOnly))
+            //    File.SetAttributes(aopfile, attrs & ~FileAttributes.ReadOnly);
+            File.Delete(aopfile);
+            File.Copy(dePATH + @"\" + _UserSteamID() + @"\profile\AdditionalOptions.tmp.txt.cm", aopfile, true);
+
+            try
+            {
+                File.Delete(dePATH + @"\" + _UserSteamID() + @"\profile\AdditionalOptions.tmp.txt.cm");
+                File.Delete(dePATH + @"\" + _UserSteamID() + @"\profile\AdditionalOptions.tmp.txt");
+                File.Delete(dePATH + @"\" + _UserSteamID() + @"\profile\AdditionalOptions.tmp");
+            }
+            catch (SystemException)
+            {
+
+            }
+            //Restart Steam & Sensei DE
+            if (steamRESTART.Checked)
+            {
+                //Clear User data cloud files
+                try
+                {
+                    if (Directory.Exists(UserDataDirectory() + @"\remote"))
+                        Directory.Delete(UserDataDirectory() + @"\remote", true);
+
+                }
+                catch (SystemException)
+                {
+                    //null
+                }
+                try
+                {
+                    if (File.Exists(UserDataDirectory() + @"\remotecache.vdf"))
+                        File.Delete(UserDataDirectory() + @"\remotecache.vdf");
+
+
+                }
+                catch (SystemException)
+                {
+                    //null
+                }
+                MessageBox.Show("[+] STEAM will restart." + "\n" + "[+] SENSEI DE will Close." + "\n\n It's important for applying your settings. ", "Initiating Steam Restart");
+                var process = Process.GetProcessesByName("steam")[0];
+                process.Kill();
+                var path = process.MainModule.FileName;
+                Process.Start(path);
+                Application.Exit();
+            }
+            //Recommend Steam restart
+            MessageBox.Show("If changes do not take place.. Please check the box Force Steam Restart.", "Changes Applied!");
+        }
+
+        private void modsTAB_Click(object sender, EventArgs e)
+        {
+            RefreshMods();
+        }
+
+        private void hotkeyLIST_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

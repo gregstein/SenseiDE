@@ -12,13 +12,15 @@ namespace DE_Sensei
     
     public partial class Main : OfficeForm
     {
+       
+
         public string GetDEPath { get; set; }
         public string GetGames { get; set; }
 
         perfCLASS pf = new perfCLASS();
         public CheckBox[] ChB;
         public CheckBox box;
-
+        private bool _dirEXISTS;
         public Main()
         {
             InitializeComponent();
@@ -27,28 +29,63 @@ namespace DE_Sensei
 
         private async void Main_Load(object sender, System.EventArgs e)
         {
-            //Initiate Effects
-            var getf = pf._Effects;
             
-            for (int i = 0; i < getf.Count; i++)
+            //Initiate Effects
+            //var getf = pf._Effects;
+            await Task.Run(() => { 
+            pf._allEFFECTS.Clear();
+            if (Directory.Exists(GetDEPath + @"\resources\_common\particles\textures\atlases\"))
             {
-                box = new CheckBox();
-                box.Tag = i.ToString();
-                box.Name = i.ToString();
-                box.AutoSize = true;
-                box.Text = getf[i][0].ToString().ToUpper() + getf[i].Substring(1).Replace(".json", "").Replace("_", " ");
-                //Get Status
-                if (new FileInfo(GetDEPath + @"\resources\_common\particles\textures\atlases\" + getf[i]).Length == 0)
-                    box.Checked = true;
+                 var getf = Directory.GetFiles(GetDEPath + @"\resources\_common\particles\textures\atlases\", "*.json").ToList();
+                foreach (string s in getf)
+                    pf._allEFFECTS.Add(Path.GetFileName(s));
+                var finalEF = pf._allEFFECTS;
 
-                if (!eflayer.Controls.ContainsKey(i.ToString()))
-                    eflayer.Controls.Add(box);
+                for (int i = 0; i < finalEF.Count; i++)
+                {
+                    box = new CheckBox();
+                    box.Tag = i.ToString();
+                    box.Name = i.ToString();
+                    box.AutoSize = true;
+                    box.Text = finalEF[i][0].ToString().ToUpper() + finalEF[i].Substring(1).Replace(".json", "").Replace("_", " ");
+                    //Get Status
+                    if (new FileInfo(GetDEPath + @"\resources\_common\particles\textures\atlases\" + finalEF[i]).Length == 0)
+                        box.Checked = true;
 
+
+
+                        if (!eflayer.Controls.ContainsKey(i.ToString()))
+                        {
+                            eflayer.Invoke(new MethodInvoker(delegate
+                            {
+                                eflayer.Controls.Add(box);
+                            }));
+                        }
+                        
+
+                }
+                    //Backup
+                    progCOPY.Invoke(new MethodInvoker(delegate
+                    {
+                        progCOPY.Maximum = pf._allEFFECTS.Count;
+                    }));
+                    progCOPY.Invoke(new MethodInvoker(delegate
+                    {
+                        progCOPY.Maximum = pf._allEFFECTS.Count;
+                    }));
+                   
+                    _dirEXISTS = true;
+                
             }
-            //backup
-            progCOPY.Maximum = pf._Effects.Count;
-            await backupFILES();
+            });
+            if(_dirEXISTS)
+                await backupFILES();
+            var reloadDEL = this.Controls.OfType<PictureBox>().FirstOrDefault(l => l.Name == "reloadGIF");
+            if (reloadDEL != null)
+                this.Controls.Remove(reloadDEL);
+            reloadGIF.Visible = false;
         }
+        
         public async Task CopyFileAsync(string sourcePath, string destinationPath)
         {
             using (Stream source = File.OpenRead(sourcePath))
@@ -93,7 +130,7 @@ namespace DE_Sensei
                 if (!Directory.Exists(GetGames + @"\Sensei_Backup"))
                     Directory.CreateDirectory(GetGames + @"\Sensei_Backup");
 
-                var getf = pf._Effects;
+                var getf = pf._allEFFECTS;
                 for (int i = 0; i < getf.Count; i++)
                 {
                     
@@ -135,7 +172,7 @@ namespace DE_Sensei
 
             try
             {
-                var getf = pf._Effects;
+                var getf = pf._allEFFECTS;
                 //Set progress counter
                 progCOPY.Maximum = selec;
                 foreach (CheckBox c in eflayer.Controls.OfType<CheckBox>())
@@ -167,7 +204,7 @@ namespace DE_Sensei
             foreach (CheckBox c in eflayer.Controls.OfType<CheckBox>())
                 c.Checked = false;
 
-            MessageBoxEx.Show("Success! " + "All Game Effects has been Restore.");
+            MessageBoxEx.Show("Success! " + "All Game Effects have been Restored.");
         }
     }
 

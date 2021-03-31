@@ -54,37 +54,81 @@ namespace DE_Sensei
            "heroglow_medium.json",
 
         };
-        public void RegEdit(string Keyname, object Value, RegistryValueKind Regtype)
+        public List<string> _allEFFECTS = new List<string>();
+        public void RegEdit(string Keyname, object Value, RegistryValueKind Regtype, string regPATH = @"Software\Microsoft\Microsoft Games\Age of Empires II DE")
         {
-            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Microsoft Games\Age of Empires II DE", true)) //must dispose key or use "using" keyword
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(regPATH, true)) //must dispose key or use "using" keyword
             {
-                if (key != null) 
+                if (key == null)
+                {
+                    using (RegistryKey keyC = Registry.CurrentUser.CreateSubKey(regPATH, true))
+                    {
+                        keyC.SetValue(Keyname, Value, Regtype);
+                    }
+                    
+                }
+                else if(key != null) 
                 {
                     key.SetValue(Keyname, Value, Regtype);
                 }
+            }
+        }
+       
+       public void HKIwriter(string path, string hkifilename)
+        {
+            byte[] loca = null;
+            using (BinaryReader b = new BinaryReader(File.Open(path, FileMode.Open)))
+            {
+                // Variables for our position.
+                int pos = 24;
+                int required = 282;
+                // Seek required position.
+                b.BaseStream.Seek(pos, SeekOrigin.Begin);
+                // Read the next bytes.
+                byte[] by = b.ReadBytes(required);
+                // Read HKI profile string and store byte piece.
+                var HKIname = System.Text.Encoding.ASCII.GetString(by).Replace(System.Text.Encoding.ASCII.GetString(by).Trim(), hkifilename);
+                loca = System.Text.Encoding.ASCII.GetBytes(HKIname);
+            }
+
+            using (BinaryWriter b = new BinaryWriter(File.Open(path, FileMode.Open)))
+            {
+                // Variables for our position.
+                int pos = 24;
+                // Seek required position.
+                b.BaseStream.Seek(pos, SeekOrigin.Begin);
+                // Write new string.
+                b.Write(loca);
+
             }
         }
         public bool senseiBORN()
         {
             using (RegistryKey key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(@"Software\SenseiDE"))
             {
-                if((Registry.GetValue(key.Name, "Splash Screen Pixelate", "")) != null)
+                if((Registry.GetValue(key.Name, "Splash Screen Pixelate", "")) == null)
                     key.SetValue("Splash Screen Pixelate", 0, Microsoft.Win32.RegistryValueKind.DWord);
 
-                if ((Registry.GetValue(key.Name, "Skip Intro", "")) != null)
+                if ((Registry.GetValue(key.Name, "Skip Intro", "")) == null)
                     key.SetValue("Skip Intro", 0, Microsoft.Win32.RegistryValueKind.DWord);
 
-                if ((Registry.GetValue(key.Name, "Disable Effects", "")) != null)
+                if ((Registry.GetValue(key.Name, "Disable Effects", "")) == null)
                     key.SetValue("Disable Effects", 0, Microsoft.Win32.RegistryValueKind.DWord);
 
                 if ((Registry.GetValue(key.Name, "Mods Manager", "")) != null)
                     key.SetValue("Mods Manager", 0, Microsoft.Win32.RegistryValueKind.DWord);
 
-                if ((Registry.GetValue(key.Name, "Performance", "")) != null)
+                if ((Registry.GetValue(key.Name, "Performance", "")) == null)
                     key.SetValue("Performance", 0, Microsoft.Win32.RegistryValueKind.DWord);
 
-                if (key.GetValue("Shrink") != null)
+                if ((Registry.GetValue(key.Name, "Shrink", "")) == null)
                     key.SetValue("Shrink", 100, Microsoft.Win32.RegistryValueKind.DWord);
+
+                if ((Registry.GetValue(key.Name, "Menu Effects", "")) == null)
+                    key.SetValue("Menu Effects", 0, Microsoft.Win32.RegistryValueKind.DWord);
+
+                if ((Registry.GetValue(key.Name, "Game Power", "")) == null)
+                    key.SetValue("Game Power", 0, Microsoft.Win32.RegistryValueKind.DWord);
                 return true;
             }
             
@@ -120,6 +164,13 @@ namespace DE_Sensei
                 SB.ValueObject = "Y";
             else
                 SB.ValueObject = "N";
+        }
+        public void RetSETTINGS4(string RegKeyvalue, ComponentFactory.Krypton.Toolkit.KryptonRadioButton SB)
+        {
+            if (HearSensei(RegKeyvalue, Microsoft.Win32.RegistryValueKind.DWord))
+                SB.Checked = true;
+            else
+                SB.Checked = false;
         }
         public void RetSETTINGS2(string RegKeyvalue, ComponentFactory.Krypton.Toolkit.KryptonTrackBar SB, System.Windows.Forms.Label lb)
         {
@@ -186,6 +237,25 @@ namespace DE_Sensei
                 reg.SetValue(gamepath, "");
             }
         }
+        public bool CheckGamePower(string gameEXEpath)
+        {
+            RegistryKey localMachine = RegistryKey.OpenBaseKey(Microsoft.Win32.RegistryHive.CurrentUser, RegistryView.Registry64); //here you specify where exactly you want your entry
+
+            var reg = localMachine.OpenSubKey(@"Software\Microsoft\DirectX\UserGpuPreferences", true);
+            if (reg == null)
+            {
+                return false; ;
+            }
+
+            if (reg.GetValue(gameEXEpath) != null)
+            {
+                if ((string)reg.GetValue(gameEXEpath) == "GpuPreference=1;")
+                    return false;
+                else if ((string)reg.GetValue(gameEXEpath) == "GpuPreference=2;")
+                    return true;
+            }
+            return false;
+        }
         public void RetSETTINGS4(string RegKeyvalue, DevComponents.DotNetBar.Controls.CheckBoxX CB, string CBvalue)
         {
 
@@ -239,6 +309,7 @@ namespace DE_Sensei
             {
                 Process regeditProcess = Process.Start("regedit.exe", "/s " + "\"" + filepath + "\"");
                 regeditProcess.WaitForExit();
+                await Task.Delay(10);
                 regeditProcess.Close();
                 return 1;
             }
