@@ -61,7 +61,7 @@ namespace DE_Sensei
             {
                 if (key == null)
                 {
-                    using (RegistryKey keyC = Registry.CurrentUser.CreateSubKey(regPATH, true))
+                    using (RegistryKey keyC = Registry.CurrentUser.CreateSubKey(regPATH))
                     {
                         keyC.SetValue(Keyname, Value, Regtype);
                     }

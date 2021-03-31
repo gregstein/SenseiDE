@@ -33,7 +33,6 @@ namespace DE_Sensei
         private string UserDataDir = "";
         private string UserSteamID = "";
         private string DecompTMP;
-        private static string zoomPhrase = @"[Default Zoom:$]+(\d+)";
         private static string zoomPhrase2 = @"Default Zoom:(\d+)";
         List<string> aopDICT = new List<string>()
 {

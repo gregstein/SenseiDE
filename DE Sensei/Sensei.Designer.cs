@@ -41,30 +41,6 @@ namespace DE_Sensei
             this.steamSTATUS = new System.Windows.Forms.PictureBox();
             this.steamLBL = new System.Windows.Forms.Label();
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
-            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelX12 = new DevComponents.DotNetBar.LabelX();
-            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.openHOTKEYFOLDER = new DevComponents.DotNetBar.ButtonX();
-            this.importHOTKEYFILE = new DevComponents.DotNetBar.ButtonX();
-            this.labelX13 = new DevComponents.DotNetBar.LabelX();
-            this.hotkeyLIST = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.refreshHOTKEYS = new DevComponents.DotNetBar.ButtonX();
-            this.labelX14 = new DevComponents.DotNetBar.LabelX();
-            this.improvGROUP = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.nohealthBARS = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.noclickDRAG = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.villagerDOUBLECLICK = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.zoomSLIDER = new DevComponents.DotNetBar.Controls.Slider();
-            this.zoomPERC = new DevComponents.DotNetBar.LabelX();
-            this.noingameZOOM = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.confirmDELETION = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.shiftAPPEND = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.applyEXP = new DevComponents.DotNetBar.ButtonX();
-            this.steamRESTART = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.Additional = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
@@ -93,6 +69,30 @@ namespace DE_Sensei
             this.runas = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.dpiscal = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelX12 = new DevComponents.DotNetBar.LabelX();
+            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.openHOTKEYFOLDER = new DevComponents.DotNetBar.ButtonX();
+            this.importHOTKEYFILE = new DevComponents.DotNetBar.ButtonX();
+            this.labelX13 = new DevComponents.DotNetBar.LabelX();
+            this.hotkeyLIST = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.refreshHOTKEYS = new DevComponents.DotNetBar.ButtonX();
+            this.labelX14 = new DevComponents.DotNetBar.LabelX();
+            this.improvGROUP = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.nohealthBARS = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.noclickDRAG = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.villagerDOUBLECLICK = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.zoomSLIDER = new DevComponents.DotNetBar.Controls.Slider();
+            this.zoomPERC = new DevComponents.DotNetBar.LabelX();
+            this.noingameZOOM = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.confirmDELETION = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.shiftAPPEND = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.applyEXP = new DevComponents.DotNetBar.ButtonX();
+            this.steamRESTART = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.Additional = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
@@ -121,17 +121,17 @@ namespace DE_Sensei
             ((System.ComponentModel.ISupportInitialize)(this.steamSTATUS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
+            this.superTabControlPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efconfig)).BeginInit();
+            this.powerSTATE.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.superTabControlPanel3.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
             this.improvGROUP.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
-            this.superTabControlPanel1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.efconfig)).BeginInit();
-            this.powerSTATE.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.superTabControlPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -246,432 +246,6 @@ namespace DE_Sensei
             this.Additional});
             this.superTabControl1.Text = "superTabControl1";
             this.superTabControl1.SelectedTabChanged += new System.EventHandler<DevComponents.DotNetBar.SuperTabStripSelectedTabChangedEventArgs>(this.superTabControl1_SelectedTabChanged);
-            // 
-            // superTabControlPanel3
-            // 
-            this.superTabControlPanel3.Controls.Add(this.flowLayoutPanel4);
-            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 38);
-            this.superTabControlPanel3.Name = "superTabControlPanel3";
-            this.superTabControlPanel3.Size = new System.Drawing.Size(495, 335);
-            this.superTabControlPanel3.TabIndex = 0;
-            this.superTabControlPanel3.TabItem = this.Additional;
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.AutoSize = true;
-            this.flowLayoutPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel4.Controls.Add(this.labelX12);
-            this.flowLayoutPanel4.Controls.Add(this.groupPanel1);
-            this.flowLayoutPanel4.Controls.Add(this.labelX14);
-            this.flowLayoutPanel4.Controls.Add(this.improvGROUP);
-            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(495, 335);
-            this.flowLayoutPanel4.TabIndex = 0;
-            this.flowLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel4_Paint);
-            // 
-            // labelX12
-            // 
-            // 
-            // 
-            // 
-            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX12.Location = new System.Drawing.Point(3, 13);
-            this.labelX12.Name = "labelX12";
-            this.labelX12.SingleLineColor = System.Drawing.Color.LightBlue;
-            this.labelX12.Size = new System.Drawing.Size(160, 23);
-            this.labelX12.Symbol = "58130";
-            this.labelX12.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.labelX12.SymbolSize = 20F;
-            this.labelX12.TabIndex = 61;
-            this.labelX12.Text = "Hotkey Operations";
-            // 
-            // groupPanel1
-            // 
-            this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel1.Controls.Add(this.flowLayoutPanel5);
-            this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel1.Location = new System.Drawing.Point(169, 13);
-            this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(316, 122);
-            // 
-            // 
-            // 
-            this.groupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel1.Style.BackColorGradientAngle = 90;
-            this.groupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderBottomWidth = 1;
-            this.groupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderLeftWidth = 1;
-            this.groupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderRightWidth = 1;
-            this.groupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderTopWidth = 1;
-            this.groupPanel1.Style.CornerDiameter = 4;
-            this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel1.TabIndex = 62;
-            // 
-            // flowLayoutPanel5
-            // 
-            this.flowLayoutPanel5.AutoScroll = true;
-            this.flowLayoutPanel5.Controls.Add(this.openHOTKEYFOLDER);
-            this.flowLayoutPanel5.Controls.Add(this.importHOTKEYFILE);
-            this.flowLayoutPanel5.Controls.Add(this.labelX13);
-            this.flowLayoutPanel5.Controls.Add(this.hotkeyLIST);
-            this.flowLayoutPanel5.Controls.Add(this.refreshHOTKEYS);
-            this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(310, 116);
-            this.flowLayoutPanel5.TabIndex = 0;
-            // 
-            // openHOTKEYFOLDER
-            // 
-            this.openHOTKEYFOLDER.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.openHOTKEYFOLDER.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.flowLayoutPanel5.SetFlowBreak(this.openHOTKEYFOLDER, true);
-            this.openHOTKEYFOLDER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openHOTKEYFOLDER.Image = global::DE_Sensei.Properties.Resources.open_file;
-            this.openHOTKEYFOLDER.Location = new System.Drawing.Point(3, 3);
-            this.openHOTKEYFOLDER.Name = "openHOTKEYFOLDER";
-            this.openHOTKEYFOLDER.Size = new System.Drawing.Size(180, 31);
-            this.openHOTKEYFOLDER.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
-            this.openHOTKEYFOLDER.TabIndex = 63;
-            this.openHOTKEYFOLDER.Text = "Open Hotkeys Folder";
-            this.openHOTKEYFOLDER.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-            this.openHOTKEYFOLDER.Click += new System.EventHandler(this.openHOTKEYFOLDER_Click);
-            // 
-            // importHOTKEYFILE
-            // 
-            this.importHOTKEYFILE.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.importHOTKEYFILE.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.flowLayoutPanel5.SetFlowBreak(this.importHOTKEYFILE, true);
-            this.importHOTKEYFILE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.importHOTKEYFILE.Image = global::DE_Sensei.Properties.Resources.newfile;
-            this.importHOTKEYFILE.Location = new System.Drawing.Point(3, 40);
-            this.importHOTKEYFILE.Name = "importHOTKEYFILE";
-            this.importHOTKEYFILE.Size = new System.Drawing.Size(180, 31);
-            this.importHOTKEYFILE.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
-            this.importHOTKEYFILE.TabIndex = 60;
-            this.importHOTKEYFILE.Text = "Import Hotkey File (*.hki)";
-            this.importHOTKEYFILE.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-            this.importHOTKEYFILE.Click += new System.EventHandler(this.importHOTKEYFILE_Click);
-            // 
-            // labelX13
-            // 
-            // 
-            // 
-            // 
-            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.labelX13.Image = global::DE_Sensei.Properties.Resources.edit;
-            this.labelX13.Location = new System.Drawing.Point(3, 77);
-            this.labelX13.Name = "labelX13";
-            this.labelX13.Size = new System.Drawing.Size(116, 23);
-            this.labelX13.TabIndex = 61;
-            this.labelX13.Text = "Set Default To";
-            // 
-            // hotkeyLIST
-            // 
-            this.hotkeyLIST.DisplayMember = "Text";
-            this.hotkeyLIST.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.hotkeyLIST.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.hotkeyLIST.FormattingEnabled = true;
-            this.hotkeyLIST.ItemHeight = 15;
-            this.hotkeyLIST.Location = new System.Drawing.Point(125, 77);
-            this.hotkeyLIST.MaximumSize = new System.Drawing.Size(136, 0);
-            this.hotkeyLIST.Name = "hotkeyLIST";
-            this.hotkeyLIST.Size = new System.Drawing.Size(136, 21);
-            this.hotkeyLIST.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.hotkeyLIST.TabIndex = 62;
-            this.hotkeyLIST.WatermarkText = "Select from list";
-            this.hotkeyLIST.SelectedIndexChanged += new System.EventHandler(this.hotkeyLIST_SelectedIndexChanged);
-            this.hotkeyLIST.SelectedValueChanged += new System.EventHandler(this.hotkeyLIST_SelectedValueChanged);
-            // 
-            // refreshHOTKEYS
-            // 
-            this.refreshHOTKEYS.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.refreshHOTKEYS.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.refreshHOTKEYS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.flowLayoutPanel5.SetFlowBreak(this.refreshHOTKEYS, true);
-            this.refreshHOTKEYS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshHOTKEYS.Image = global::DE_Sensei.Properties.Resources.refresh2;
-            this.refreshHOTKEYS.Location = new System.Drawing.Point(267, 77);
-            this.refreshHOTKEYS.Name = "refreshHOTKEYS";
-            this.refreshHOTKEYS.Size = new System.Drawing.Size(20, 23);
-            this.refreshHOTKEYS.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
-            this.refreshHOTKEYS.TabIndex = 64;
-            this.refreshHOTKEYS.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-            this.refreshHOTKEYS.Click += new System.EventHandler(this.refreshHOTKEYS_Click);
-            // 
-            // labelX14
-            // 
-            // 
-            // 
-            // 
-            this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.flowLayoutPanel4.SetFlowBreak(this.labelX14, true);
-            this.labelX14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX14.Location = new System.Drawing.Point(3, 141);
-            this.labelX14.Name = "labelX14";
-            this.labelX14.SingleLineColor = System.Drawing.Color.LightBlue;
-            this.labelX14.Size = new System.Drawing.Size(230, 28);
-            this.labelX14.Symbol = "59600";
-            this.labelX14.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.labelX14.SymbolSize = 20F;
-            this.labelX14.TabIndex = 63;
-            this.labelX14.Text = "Improve Gaming Experience";
-            this.labelX14.Click += new System.EventHandler(this.labelX14_Click);
-            // 
-            // improvGROUP
-            // 
-            this.improvGROUP.BackColor = System.Drawing.Color.Transparent;
-            this.improvGROUP.CanvasColor = System.Drawing.SystemColors.Control;
-            this.improvGROUP.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.improvGROUP.Controls.Add(this.flowLayoutPanel6);
-            this.improvGROUP.DisabledBackColor = System.Drawing.Color.Empty;
-            this.improvGROUP.DrawTitleBox = false;
-            this.flowLayoutPanel4.SetFlowBreak(this.improvGROUP, true);
-            this.improvGROUP.Location = new System.Drawing.Point(3, 175);
-            this.improvGROUP.Name = "improvGROUP";
-            this.improvGROUP.Size = new System.Drawing.Size(482, 157);
-            // 
-            // 
-            // 
-            this.improvGROUP.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.improvGROUP.Style.BackColorGradientAngle = 90;
-            this.improvGROUP.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.improvGROUP.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.improvGROUP.Style.BorderBottomWidth = 1;
-            this.improvGROUP.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.improvGROUP.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.improvGROUP.Style.BorderLeftWidth = 1;
-            this.improvGROUP.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.improvGROUP.Style.BorderRightWidth = 1;
-            this.improvGROUP.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.improvGROUP.Style.BorderTopWidth = 1;
-            this.improvGROUP.Style.CornerDiameter = 4;
-            this.improvGROUP.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.improvGROUP.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.improvGROUP.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.improvGROUP.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.improvGROUP.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.improvGROUP.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.improvGROUP.TabIndex = 64;
-            // 
-            // flowLayoutPanel6
-            // 
-            this.flowLayoutPanel6.AutoScroll = true;
-            this.flowLayoutPanel6.Controls.Add(this.nohealthBARS);
-            this.flowLayoutPanel6.Controls.Add(this.noclickDRAG);
-            this.flowLayoutPanel6.Controls.Add(this.villagerDOUBLECLICK);
-            this.flowLayoutPanel6.Controls.Add(this.zoomSLIDER);
-            this.flowLayoutPanel6.Controls.Add(this.zoomPERC);
-            this.flowLayoutPanel6.Controls.Add(this.noingameZOOM);
-            this.flowLayoutPanel6.Controls.Add(this.confirmDELETION);
-            this.flowLayoutPanel6.Controls.Add(this.shiftAPPEND);
-            this.flowLayoutPanel6.Controls.Add(this.applyEXP);
-            this.flowLayoutPanel6.Controls.Add(this.steamRESTART);
-            this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(476, 151);
-            this.flowLayoutPanel6.TabIndex = 0;
-            // 
-            // nohealthBARS
-            // 
-            // 
-            // 
-            // 
-            this.nohealthBARS.BackgroundStyle.Class = "Office2007StatusBarBackground2";
-            this.nohealthBARS.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.nohealthBARS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nohealthBARS.Location = new System.Drawing.Point(3, 13);
-            this.nohealthBARS.Name = "nohealthBARS";
-            this.nohealthBARS.Size = new System.Drawing.Size(110, 26);
-            this.nohealthBARS.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.nohealthBARS.TabIndex = 0;
-            this.nohealthBARS.Text = "No Health Bars";
-            // 
-            // noclickDRAG
-            // 
-            // 
-            // 
-            // 
-            this.noclickDRAG.BackgroundStyle.Class = "Office2007StatusBarBackground2";
-            this.noclickDRAG.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.noclickDRAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noclickDRAG.Location = new System.Drawing.Point(119, 13);
-            this.noclickDRAG.Name = "noclickDRAG";
-            this.noclickDRAG.Size = new System.Drawing.Size(187, 26);
-            this.noclickDRAG.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.noclickDRAG.TabIndex = 2;
-            this.noclickDRAG.Text = "No Click Drag Scroll Button";
-            // 
-            // villagerDOUBLECLICK
-            // 
-            // 
-            // 
-            // 
-            this.villagerDOUBLECLICK.BackgroundStyle.Class = "Office2007StatusBarBackground2";
-            this.villagerDOUBLECLICK.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.villagerDOUBLECLICK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.villagerDOUBLECLICK.Location = new System.Drawing.Point(312, 13);
-            this.villagerDOUBLECLICK.Name = "villagerDOUBLECLICK";
-            this.villagerDOUBLECLICK.Size = new System.Drawing.Size(147, 26);
-            this.villagerDOUBLECLICK.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.villagerDOUBLECLICK.TabIndex = 3;
-            this.villagerDOUBLECLICK.Text = "Villager DoubleClick";
-            // 
-            // zoomSLIDER
-            // 
-            // 
-            // 
-            // 
-            this.zoomSLIDER.BackgroundStyle.Class = "Office2007StatusBarBackground2";
-            this.zoomSLIDER.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.zoomSLIDER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zoomSLIDER.LabelWidth = 90;
-            this.zoomSLIDER.Location = new System.Drawing.Point(3, 45);
-            this.zoomSLIDER.Name = "zoomSLIDER";
-            this.zoomSLIDER.Size = new System.Drawing.Size(221, 23);
-            this.zoomSLIDER.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.zoomSLIDER.TabIndex = 1;
-            this.zoomSLIDER.Text = "Default Zoom";
-            this.zoomSLIDER.Value = 50;
-            this.zoomSLIDER.ValueChanged += new System.EventHandler(this.zoomSLIDER_ValueChanged);
-            // 
-            // zoomPERC
-            // 
-            // 
-            // 
-            // 
-            this.zoomPERC.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.zoomPERC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zoomPERC.Location = new System.Drawing.Point(230, 45);
-            this.zoomPERC.Name = "zoomPERC";
-            this.zoomPERC.SingleLineColor = System.Drawing.Color.LightBlue;
-            this.zoomPERC.Size = new System.Drawing.Size(44, 23);
-            this.zoomPERC.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.zoomPERC.SymbolSize = 20F;
-            this.zoomPERC.TabIndex = 62;
-            this.zoomPERC.Text = "50%";
-            // 
-            // noingameZOOM
-            // 
-            // 
-            // 
-            // 
-            this.noingameZOOM.BackgroundStyle.Class = "Office2007StatusBarBackground2";
-            this.noingameZOOM.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.noingameZOOM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noingameZOOM.Location = new System.Drawing.Point(280, 45);
-            this.noingameZOOM.Name = "noingameZOOM";
-            this.noingameZOOM.Size = new System.Drawing.Size(163, 26);
-            this.noingameZOOM.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.noingameZOOM.TabIndex = 5;
-            this.noingameZOOM.Text = "Disable Zoom Ingame";
-            // 
-            // confirmDELETION
-            // 
-            // 
-            // 
-            // 
-            this.confirmDELETION.BackgroundStyle.Class = "Office2007StatusBarBackground2";
-            this.confirmDELETION.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.confirmDELETION.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmDELETION.Location = new System.Drawing.Point(3, 77);
-            this.confirmDELETION.Name = "confirmDELETION";
-            this.confirmDELETION.Size = new System.Drawing.Size(212, 26);
-            this.confirmDELETION.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.confirmDELETION.TabIndex = 4;
-            this.confirmDELETION.Text = "Confirm Deletion of Castles/TCs";
-            // 
-            // shiftAPPEND
-            // 
-            // 
-            // 
-            // 
-            this.shiftAPPEND.BackgroundStyle.Class = "Office2007StatusBarBackground2";
-            this.shiftAPPEND.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.flowLayoutPanel6.SetFlowBreak(this.shiftAPPEND, true);
-            this.shiftAPPEND.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shiftAPPEND.Location = new System.Drawing.Point(221, 77);
-            this.shiftAPPEND.Name = "shiftAPPEND";
-            this.shiftAPPEND.Size = new System.Drawing.Size(143, 26);
-            this.shiftAPPEND.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.shiftAPPEND.TabIndex = 6;
-            this.shiftAPPEND.Text = "Shift Append Groups";
-            // 
-            // applyEXP
-            // 
-            this.applyEXP.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.applyEXP.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.applyEXP.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.applyEXP.Image = global::DE_Sensei.Properties.Resources.applysettings;
-            this.applyEXP.Location = new System.Drawing.Point(3, 109);
-            this.applyEXP.Name = "applyEXP";
-            this.applyEXP.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
-            this.applyEXP.Size = new System.Drawing.Size(162, 39);
-            this.applyEXP.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.applyEXP.TabIndex = 7;
-            this.applyEXP.Text = "APPLY SETTINGS";
-            this.applyEXP.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-            this.applyEXP.Click += new System.EventHandler(this.applyEXP_Click);
-            // 
-            // steamRESTART
-            // 
-            this.steamRESTART.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.steamRESTART.BackgroundStyle.BorderGradientAngle = 0;
-            this.steamRESTART.BackgroundStyle.BorderLightGradientAngle = 0;
-            this.steamRESTART.BackgroundStyle.CornerDiameter = 20;
-            this.steamRESTART.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.steamRESTART.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.steamRESTART.Location = new System.Drawing.Point(171, 109);
-            this.steamRESTART.Name = "steamRESTART";
-            this.steamRESTART.Size = new System.Drawing.Size(200, 45);
-            this.steamRESTART.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.steamRESTART.TabIndex = 63;
-            this.steamRESTART.Text = "And Force Steam Restart";
-            this.steamRESTART.TextColor = System.Drawing.Color.Green;
-            // 
-            // Additional
-            // 
-            this.Additional.AttachedControl = this.superTabControlPanel3;
-            this.Additional.Enabled = false;
-            this.Additional.GlobalItem = false;
-            this.Additional.Image = global::DE_Sensei.Properties.Resources.settings;
-            this.Additional.Name = "Additional";
-            this.Additional.Text = "Additional";
-            this.Additional.Click += new System.EventHandler(this.Additional_Click);
             // 
             // superTabControlPanel1
             // 
@@ -1111,6 +685,432 @@ namespace DE_Sensei
             this.superTabItem1.Name = "superTabItem1";
             this.superTabItem1.Text = "Boost Performance";
             // 
+            // superTabControlPanel3
+            // 
+            this.superTabControlPanel3.Controls.Add(this.flowLayoutPanel4);
+            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 38);
+            this.superTabControlPanel3.Name = "superTabControlPanel3";
+            this.superTabControlPanel3.Size = new System.Drawing.Size(495, 335);
+            this.superTabControlPanel3.TabIndex = 0;
+            this.superTabControlPanel3.TabItem = this.Additional;
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.AutoSize = true;
+            this.flowLayoutPanel4.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel4.Controls.Add(this.labelX12);
+            this.flowLayoutPanel4.Controls.Add(this.groupPanel1);
+            this.flowLayoutPanel4.Controls.Add(this.labelX14);
+            this.flowLayoutPanel4.Controls.Add(this.improvGROUP);
+            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(495, 335);
+            this.flowLayoutPanel4.TabIndex = 0;
+            this.flowLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel4_Paint);
+            // 
+            // labelX12
+            // 
+            // 
+            // 
+            // 
+            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX12.Location = new System.Drawing.Point(3, 13);
+            this.labelX12.Name = "labelX12";
+            this.labelX12.SingleLineColor = System.Drawing.Color.LightBlue;
+            this.labelX12.Size = new System.Drawing.Size(160, 23);
+            this.labelX12.Symbol = "58130";
+            this.labelX12.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.labelX12.SymbolSize = 20F;
+            this.labelX12.TabIndex = 61;
+            this.labelX12.Text = "Hotkey Operations";
+            // 
+            // groupPanel1
+            // 
+            this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.flowLayoutPanel5);
+            this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
+            this.groupPanel1.Location = new System.Drawing.Point(169, 13);
+            this.groupPanel1.Name = "groupPanel1";
+            this.groupPanel1.Size = new System.Drawing.Size(316, 122);
+            // 
+            // 
+            // 
+            this.groupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanel1.Style.BackColorGradientAngle = 90;
+            this.groupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel1.Style.BorderBottomWidth = 1;
+            this.groupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel1.Style.BorderLeftWidth = 1;
+            this.groupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel1.Style.BorderRightWidth = 1;
+            this.groupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel1.Style.BorderTopWidth = 1;
+            this.groupPanel1.Style.CornerDiameter = 4;
+            this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel1.TabIndex = 62;
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.AutoScroll = true;
+            this.flowLayoutPanel5.Controls.Add(this.openHOTKEYFOLDER);
+            this.flowLayoutPanel5.Controls.Add(this.importHOTKEYFILE);
+            this.flowLayoutPanel5.Controls.Add(this.labelX13);
+            this.flowLayoutPanel5.Controls.Add(this.hotkeyLIST);
+            this.flowLayoutPanel5.Controls.Add(this.refreshHOTKEYS);
+            this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(310, 116);
+            this.flowLayoutPanel5.TabIndex = 0;
+            // 
+            // openHOTKEYFOLDER
+            // 
+            this.openHOTKEYFOLDER.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.openHOTKEYFOLDER.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.flowLayoutPanel5.SetFlowBreak(this.openHOTKEYFOLDER, true);
+            this.openHOTKEYFOLDER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openHOTKEYFOLDER.Image = global::DE_Sensei.Properties.Resources.open_file;
+            this.openHOTKEYFOLDER.Location = new System.Drawing.Point(3, 3);
+            this.openHOTKEYFOLDER.Name = "openHOTKEYFOLDER";
+            this.openHOTKEYFOLDER.Size = new System.Drawing.Size(180, 31);
+            this.openHOTKEYFOLDER.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.openHOTKEYFOLDER.TabIndex = 63;
+            this.openHOTKEYFOLDER.Text = "Open Hotkeys Folder";
+            this.openHOTKEYFOLDER.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+            this.openHOTKEYFOLDER.Click += new System.EventHandler(this.openHOTKEYFOLDER_Click);
+            // 
+            // importHOTKEYFILE
+            // 
+            this.importHOTKEYFILE.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.importHOTKEYFILE.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.flowLayoutPanel5.SetFlowBreak(this.importHOTKEYFILE, true);
+            this.importHOTKEYFILE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.importHOTKEYFILE.Image = global::DE_Sensei.Properties.Resources.newfile;
+            this.importHOTKEYFILE.Location = new System.Drawing.Point(3, 40);
+            this.importHOTKEYFILE.Name = "importHOTKEYFILE";
+            this.importHOTKEYFILE.Size = new System.Drawing.Size(180, 31);
+            this.importHOTKEYFILE.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.importHOTKEYFILE.TabIndex = 60;
+            this.importHOTKEYFILE.Text = "Import Hotkey File (*.hki)";
+            this.importHOTKEYFILE.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+            this.importHOTKEYFILE.Click += new System.EventHandler(this.importHOTKEYFILE_Click);
+            // 
+            // labelX13
+            // 
+            // 
+            // 
+            // 
+            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.labelX13.Image = global::DE_Sensei.Properties.Resources.edit;
+            this.labelX13.Location = new System.Drawing.Point(3, 77);
+            this.labelX13.Name = "labelX13";
+            this.labelX13.Size = new System.Drawing.Size(116, 23);
+            this.labelX13.TabIndex = 61;
+            this.labelX13.Text = "Set Default To";
+            // 
+            // hotkeyLIST
+            // 
+            this.hotkeyLIST.DisplayMember = "Text";
+            this.hotkeyLIST.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.hotkeyLIST.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.hotkeyLIST.FormattingEnabled = true;
+            this.hotkeyLIST.ItemHeight = 15;
+            this.hotkeyLIST.Location = new System.Drawing.Point(125, 77);
+            this.hotkeyLIST.MaximumSize = new System.Drawing.Size(136, 0);
+            this.hotkeyLIST.Name = "hotkeyLIST";
+            this.hotkeyLIST.Size = new System.Drawing.Size(136, 21);
+            this.hotkeyLIST.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.hotkeyLIST.TabIndex = 62;
+            this.hotkeyLIST.WatermarkText = "Select from list";
+            this.hotkeyLIST.SelectedIndexChanged += new System.EventHandler(this.hotkeyLIST_SelectedIndexChanged);
+            this.hotkeyLIST.SelectedValueChanged += new System.EventHandler(this.hotkeyLIST_SelectedValueChanged);
+            // 
+            // refreshHOTKEYS
+            // 
+            this.refreshHOTKEYS.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.refreshHOTKEYS.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.refreshHOTKEYS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flowLayoutPanel5.SetFlowBreak(this.refreshHOTKEYS, true);
+            this.refreshHOTKEYS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshHOTKEYS.Image = global::DE_Sensei.Properties.Resources.refresh2;
+            this.refreshHOTKEYS.Location = new System.Drawing.Point(267, 77);
+            this.refreshHOTKEYS.Name = "refreshHOTKEYS";
+            this.refreshHOTKEYS.Size = new System.Drawing.Size(20, 23);
+            this.refreshHOTKEYS.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.refreshHOTKEYS.TabIndex = 64;
+            this.refreshHOTKEYS.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+            this.refreshHOTKEYS.Click += new System.EventHandler(this.refreshHOTKEYS_Click);
+            // 
+            // labelX14
+            // 
+            // 
+            // 
+            // 
+            this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.flowLayoutPanel4.SetFlowBreak(this.labelX14, true);
+            this.labelX14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX14.Location = new System.Drawing.Point(3, 141);
+            this.labelX14.Name = "labelX14";
+            this.labelX14.SingleLineColor = System.Drawing.Color.LightBlue;
+            this.labelX14.Size = new System.Drawing.Size(230, 28);
+            this.labelX14.Symbol = "59600";
+            this.labelX14.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.labelX14.SymbolSize = 20F;
+            this.labelX14.TabIndex = 63;
+            this.labelX14.Text = "Improve Gaming Experience";
+            this.labelX14.Click += new System.EventHandler(this.labelX14_Click);
+            // 
+            // improvGROUP
+            // 
+            this.improvGROUP.BackColor = System.Drawing.Color.Transparent;
+            this.improvGROUP.CanvasColor = System.Drawing.SystemColors.Control;
+            this.improvGROUP.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.improvGROUP.Controls.Add(this.flowLayoutPanel6);
+            this.improvGROUP.DisabledBackColor = System.Drawing.Color.Empty;
+            this.improvGROUP.DrawTitleBox = false;
+            this.flowLayoutPanel4.SetFlowBreak(this.improvGROUP, true);
+            this.improvGROUP.Location = new System.Drawing.Point(3, 175);
+            this.improvGROUP.Name = "improvGROUP";
+            this.improvGROUP.Size = new System.Drawing.Size(482, 157);
+            // 
+            // 
+            // 
+            this.improvGROUP.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.improvGROUP.Style.BackColorGradientAngle = 90;
+            this.improvGROUP.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.improvGROUP.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.improvGROUP.Style.BorderBottomWidth = 1;
+            this.improvGROUP.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.improvGROUP.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.improvGROUP.Style.BorderLeftWidth = 1;
+            this.improvGROUP.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.improvGROUP.Style.BorderRightWidth = 1;
+            this.improvGROUP.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.improvGROUP.Style.BorderTopWidth = 1;
+            this.improvGROUP.Style.CornerDiameter = 4;
+            this.improvGROUP.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.improvGROUP.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.improvGROUP.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.improvGROUP.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.improvGROUP.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.improvGROUP.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.improvGROUP.TabIndex = 64;
+            // 
+            // flowLayoutPanel6
+            // 
+            this.flowLayoutPanel6.AutoScroll = true;
+            this.flowLayoutPanel6.Controls.Add(this.nohealthBARS);
+            this.flowLayoutPanel6.Controls.Add(this.noclickDRAG);
+            this.flowLayoutPanel6.Controls.Add(this.villagerDOUBLECLICK);
+            this.flowLayoutPanel6.Controls.Add(this.zoomSLIDER);
+            this.flowLayoutPanel6.Controls.Add(this.zoomPERC);
+            this.flowLayoutPanel6.Controls.Add(this.noingameZOOM);
+            this.flowLayoutPanel6.Controls.Add(this.confirmDELETION);
+            this.flowLayoutPanel6.Controls.Add(this.shiftAPPEND);
+            this.flowLayoutPanel6.Controls.Add(this.applyEXP);
+            this.flowLayoutPanel6.Controls.Add(this.steamRESTART);
+            this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
+            this.flowLayoutPanel6.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(476, 151);
+            this.flowLayoutPanel6.TabIndex = 0;
+            // 
+            // nohealthBARS
+            // 
+            // 
+            // 
+            // 
+            this.nohealthBARS.BackgroundStyle.Class = "Office2007StatusBarBackground2";
+            this.nohealthBARS.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.nohealthBARS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nohealthBARS.Location = new System.Drawing.Point(3, 13);
+            this.nohealthBARS.Name = "nohealthBARS";
+            this.nohealthBARS.Size = new System.Drawing.Size(110, 26);
+            this.nohealthBARS.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.nohealthBARS.TabIndex = 0;
+            this.nohealthBARS.Text = "No Health Bars";
+            // 
+            // noclickDRAG
+            // 
+            // 
+            // 
+            // 
+            this.noclickDRAG.BackgroundStyle.Class = "Office2007StatusBarBackground2";
+            this.noclickDRAG.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.noclickDRAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noclickDRAG.Location = new System.Drawing.Point(119, 13);
+            this.noclickDRAG.Name = "noclickDRAG";
+            this.noclickDRAG.Size = new System.Drawing.Size(187, 26);
+            this.noclickDRAG.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.noclickDRAG.TabIndex = 2;
+            this.noclickDRAG.Text = "No Click Drag Scroll Button";
+            // 
+            // villagerDOUBLECLICK
+            // 
+            // 
+            // 
+            // 
+            this.villagerDOUBLECLICK.BackgroundStyle.Class = "Office2007StatusBarBackground2";
+            this.villagerDOUBLECLICK.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.villagerDOUBLECLICK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.villagerDOUBLECLICK.Location = new System.Drawing.Point(312, 13);
+            this.villagerDOUBLECLICK.Name = "villagerDOUBLECLICK";
+            this.villagerDOUBLECLICK.Size = new System.Drawing.Size(147, 26);
+            this.villagerDOUBLECLICK.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.villagerDOUBLECLICK.TabIndex = 3;
+            this.villagerDOUBLECLICK.Text = "Villager DoubleClick";
+            // 
+            // zoomSLIDER
+            // 
+            // 
+            // 
+            // 
+            this.zoomSLIDER.BackgroundStyle.Class = "Office2007StatusBarBackground2";
+            this.zoomSLIDER.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.zoomSLIDER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zoomSLIDER.LabelWidth = 90;
+            this.zoomSLIDER.Location = new System.Drawing.Point(3, 45);
+            this.zoomSLIDER.Name = "zoomSLIDER";
+            this.zoomSLIDER.Size = new System.Drawing.Size(221, 23);
+            this.zoomSLIDER.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.zoomSLIDER.TabIndex = 1;
+            this.zoomSLIDER.Text = "Default Zoom";
+            this.zoomSLIDER.Value = 50;
+            this.zoomSLIDER.ValueChanged += new System.EventHandler(this.zoomSLIDER_ValueChanged);
+            // 
+            // zoomPERC
+            // 
+            // 
+            // 
+            // 
+            this.zoomPERC.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.zoomPERC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zoomPERC.Location = new System.Drawing.Point(230, 45);
+            this.zoomPERC.Name = "zoomPERC";
+            this.zoomPERC.SingleLineColor = System.Drawing.Color.LightBlue;
+            this.zoomPERC.Size = new System.Drawing.Size(44, 23);
+            this.zoomPERC.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.zoomPERC.SymbolSize = 20F;
+            this.zoomPERC.TabIndex = 62;
+            this.zoomPERC.Text = "50%";
+            // 
+            // noingameZOOM
+            // 
+            // 
+            // 
+            // 
+            this.noingameZOOM.BackgroundStyle.Class = "Office2007StatusBarBackground2";
+            this.noingameZOOM.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.noingameZOOM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noingameZOOM.Location = new System.Drawing.Point(280, 45);
+            this.noingameZOOM.Name = "noingameZOOM";
+            this.noingameZOOM.Size = new System.Drawing.Size(163, 26);
+            this.noingameZOOM.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.noingameZOOM.TabIndex = 5;
+            this.noingameZOOM.Text = "Disable Zoom Ingame";
+            // 
+            // confirmDELETION
+            // 
+            // 
+            // 
+            // 
+            this.confirmDELETION.BackgroundStyle.Class = "Office2007StatusBarBackground2";
+            this.confirmDELETION.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.confirmDELETION.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmDELETION.Location = new System.Drawing.Point(3, 77);
+            this.confirmDELETION.Name = "confirmDELETION";
+            this.confirmDELETION.Size = new System.Drawing.Size(212, 26);
+            this.confirmDELETION.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.confirmDELETION.TabIndex = 4;
+            this.confirmDELETION.Text = "Confirm Deletion of Castles/TCs";
+            // 
+            // shiftAPPEND
+            // 
+            // 
+            // 
+            // 
+            this.shiftAPPEND.BackgroundStyle.Class = "Office2007StatusBarBackground2";
+            this.shiftAPPEND.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.flowLayoutPanel6.SetFlowBreak(this.shiftAPPEND, true);
+            this.shiftAPPEND.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shiftAPPEND.Location = new System.Drawing.Point(221, 77);
+            this.shiftAPPEND.Name = "shiftAPPEND";
+            this.shiftAPPEND.Size = new System.Drawing.Size(143, 26);
+            this.shiftAPPEND.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.shiftAPPEND.TabIndex = 6;
+            this.shiftAPPEND.Text = "Shift Append Groups";
+            // 
+            // applyEXP
+            // 
+            this.applyEXP.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.applyEXP.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.applyEXP.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applyEXP.Image = global::DE_Sensei.Properties.Resources.applysettings;
+            this.applyEXP.Location = new System.Drawing.Point(3, 109);
+            this.applyEXP.Name = "applyEXP";
+            this.applyEXP.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
+            this.applyEXP.Size = new System.Drawing.Size(162, 39);
+            this.applyEXP.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.applyEXP.TabIndex = 7;
+            this.applyEXP.Text = "APPLY SETTINGS";
+            this.applyEXP.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+            this.applyEXP.Click += new System.EventHandler(this.applyEXP_Click);
+            // 
+            // steamRESTART
+            // 
+            this.steamRESTART.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.steamRESTART.BackgroundStyle.BorderGradientAngle = 0;
+            this.steamRESTART.BackgroundStyle.BorderLightGradientAngle = 0;
+            this.steamRESTART.BackgroundStyle.CornerDiameter = 20;
+            this.steamRESTART.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.steamRESTART.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.steamRESTART.Location = new System.Drawing.Point(171, 109);
+            this.steamRESTART.Name = "steamRESTART";
+            this.steamRESTART.Size = new System.Drawing.Size(200, 45);
+            this.steamRESTART.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.steamRESTART.TabIndex = 63;
+            this.steamRESTART.Text = "And Force Steam Restart";
+            this.steamRESTART.TextColor = System.Drawing.Color.Green;
+            // 
+            // Additional
+            // 
+            this.Additional.AttachedControl = this.superTabControlPanel3;
+            this.Additional.Enabled = false;
+            this.Additional.GlobalItem = false;
+            this.Additional.Image = global::DE_Sensei.Properties.Resources.settings;
+            this.Additional.Name = "Additional";
+            this.Additional.Text = "Additional";
+            this.Additional.Click += new System.EventHandler(this.Additional_Click);
+            // 
             // superTabControlPanel2
             // 
             this.superTabControlPanel2.Controls.Add(this.flowLayoutPanel3);
@@ -1181,6 +1181,7 @@ namespace DE_Sensei
             // 
             this.listsubmitee.BackgroundStyle.Class = "ListBoxAdv";
             this.listsubmitee.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.listsubmitee.CheckStateMember = null;
             this.listsubmitee.ContainerControlProcessDialogKey = true;
             this.listsubmitee.DragDropSupport = true;
             this.flowLayoutPanel3.SetFlowBreak(this.listsubmitee, true);
@@ -1413,13 +1414,6 @@ namespace DE_Sensei
             ((System.ComponentModel.ISupportInitialize)(this.steamSTATUS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);
-            this.superTabControlPanel3.ResumeLayout(false);
-            this.superTabControlPanel3.PerformLayout();
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.groupPanel1.ResumeLayout(false);
-            this.flowLayoutPanel5.ResumeLayout(false);
-            this.improvGROUP.ResumeLayout(false);
-            this.flowLayoutPanel6.ResumeLayout(false);
             this.superTabControlPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
@@ -1427,6 +1421,13 @@ namespace DE_Sensei
             this.powerSTATE.ResumeLayout(false);
             this.powerSTATE.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.superTabControlPanel3.ResumeLayout(false);
+            this.superTabControlPanel3.PerformLayout();
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.groupPanel1.ResumeLayout(false);
+            this.flowLayoutPanel5.ResumeLayout(false);
+            this.improvGROUP.ResumeLayout(false);
+            this.flowLayoutPanel6.ResumeLayout(false);
             this.superTabControlPanel2.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
