@@ -8,7 +8,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/gregstein/SenseiDE.svg)](https://github.com/gregstein/SenseiDE/network)
 
 **Unleash The Ultimate Performance from Age of Empires 2 Definitive with the help of SenSei DE.**
-<img src="https://user-images.githubusercontent.com/16618729/113196684-b1f16a80-925b-11eb-805d-2788944b95e5.jpg" width="450" >
+<img src="https://user-images.githubusercontent.com/16618729/113511984-71933480-955a-11eb-9545-d5d6cc18c98b.jpg" width="450" >
 
 Things you can do with Sensei DE
 
