@@ -20,6 +20,7 @@ Things you can do with Sensei DE
 - Install Your Mods as Offline And delete the online ones.
 - Manage Your Mods (Install Offline, Export, Delete).
 - Disable Menu Effects.
+- Add AoE2 DE to Windows Defender Exclusion List
 - Game Power Settings.
 - Optimal Windows Compatibility Settings
 - Manage Hotkeys (Install, Set default profile)
