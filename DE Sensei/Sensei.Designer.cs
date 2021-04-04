@@ -41,6 +41,30 @@ namespace DE_Sensei
             this.steamSTATUS = new System.Windows.Forms.PictureBox();
             this.steamLBL = new System.Windows.Forms.Label();
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
+            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelX12 = new DevComponents.DotNetBar.LabelX();
+            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.importHOTKEYFILE = new DevComponents.DotNetBar.ButtonX();
+            this.openHOTKEYFOLDER = new DevComponents.DotNetBar.ButtonX();
+            this.labelX13 = new DevComponents.DotNetBar.LabelX();
+            this.hotkeyLIST = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.refreshHOTKEYS = new DevComponents.DotNetBar.ButtonX();
+            this.labelX14 = new DevComponents.DotNetBar.LabelX();
+            this.improvGROUP = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.nohealthBARS = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.noclickDRAG = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.villagerDOUBLECLICK = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.zoomSLIDER = new DevComponents.DotNetBar.Controls.Slider();
+            this.zoomPERC = new DevComponents.DotNetBar.LabelX();
+            this.noingameZOOM = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.confirmDELETION = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.shiftAPPEND = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.applyEXP = new DevComponents.DotNetBar.ButtonX();
+            this.steamRESTART = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.Additional = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
@@ -59,6 +83,8 @@ namespace DE_Sensei
             this.efconfig = new System.Windows.Forms.PictureBox();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.menueff = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.labelX15 = new DevComponents.DotNetBar.LabelX();
+            this.winDEFENDER = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
             this.powerSTATE = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.highPERFORMANCE = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
@@ -69,30 +95,6 @@ namespace DE_Sensei
             this.runas = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.dpiscal = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelX12 = new DevComponents.DotNetBar.LabelX();
-            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.openHOTKEYFOLDER = new DevComponents.DotNetBar.ButtonX();
-            this.importHOTKEYFILE = new DevComponents.DotNetBar.ButtonX();
-            this.labelX13 = new DevComponents.DotNetBar.LabelX();
-            this.hotkeyLIST = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.refreshHOTKEYS = new DevComponents.DotNetBar.ButtonX();
-            this.labelX14 = new DevComponents.DotNetBar.LabelX();
-            this.improvGROUP = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.nohealthBARS = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.noclickDRAG = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.villagerDOUBLECLICK = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.zoomSLIDER = new DevComponents.DotNetBar.Controls.Slider();
-            this.zoomPERC = new DevComponents.DotNetBar.LabelX();
-            this.noingameZOOM = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.confirmDELETION = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.shiftAPPEND = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.applyEXP = new DevComponents.DotNetBar.ButtonX();
-            this.steamRESTART = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.Additional = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
@@ -121,17 +123,17 @@ namespace DE_Sensei
             ((System.ComponentModel.ISupportInitialize)(this.steamSTATUS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
-            this.superTabControlPanel1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.efconfig)).BeginInit();
-            this.powerSTATE.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.superTabControlPanel3.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
             this.improvGROUP.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
+            this.superTabControlPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efconfig)).BeginInit();
+            this.powerSTATE.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.superTabControlPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -247,444 +249,6 @@ namespace DE_Sensei
             this.superTabControl1.Text = "superTabControl1";
             this.superTabControl1.SelectedTabChanged += new System.EventHandler<DevComponents.DotNetBar.SuperTabStripSelectedTabChangedEventArgs>(this.superTabControl1_SelectedTabChanged);
             // 
-            // superTabControlPanel1
-            // 
-            this.superTabControlPanel1.Controls.Add(this.flowLayoutPanel2);
-            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 38);
-            this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Size = new System.Drawing.Size(495, 335);
-            this.superTabControlPanel1.TabIndex = 1;
-            this.superTabControlPanel1.TabItem = this.superTabItem1;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel2.Controls.Add(this.labelX1);
-            this.flowLayoutPanel2.Controls.Add(this.perfcb);
-            this.flowLayoutPanel2.Controls.Add(this.labelX2);
-            this.flowLayoutPanel2.Controls.Add(this.shrinktrack);
-            this.flowLayoutPanel2.Controls.Add(this.shrinklbl);
-            this.flowLayoutPanel2.Controls.Add(this.labelX3);
-            this.flowLayoutPanel2.Controls.Add(this.splashswitch);
-            this.flowLayoutPanel2.Controls.Add(this.labelX4);
-            this.flowLayoutPanel2.Controls.Add(this.introswitch);
-            this.flowLayoutPanel2.Controls.Add(this.labelX5);
-            this.flowLayoutPanel2.Controls.Add(this.effectswitch);
-            this.flowLayoutPanel2.Controls.Add(this.efconfig);
-            this.flowLayoutPanel2.Controls.Add(this.labelX10);
-            this.flowLayoutPanel2.Controls.Add(this.menueff);
-            this.flowLayoutPanel2.Controls.Add(this.labelX11);
-            this.flowLayoutPanel2.Controls.Add(this.powerSTATE);
-            this.flowLayoutPanel2.Controls.Add(this.labelX7);
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox3);
-            this.flowLayoutPanel2.Controls.Add(this.screenopt);
-            this.flowLayoutPanel2.Controls.Add(this.runas);
-            this.flowLayoutPanel2.Controls.Add(this.dpiscal);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(495, 335);
-            this.flowLayoutPanel2.TabIndex = 0;
-            // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(3, 13);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.SingleLineColor = System.Drawing.Color.LightBlue;
-            this.labelX1.Size = new System.Drawing.Size(185, 23);
-            this.labelX1.Symbol = "";
-            this.labelX1.SymbolSize = 15F;
-            this.labelX1.TabIndex = 48;
-            this.labelX1.Text = " Graphics Profiles";
-            // 
-            // perfcb
-            // 
-            this.perfcb.DisplayMember = "Text";
-            this.perfcb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.perfcb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.perfcb.Enabled = false;
-            this.flowLayoutPanel2.SetFlowBreak(this.perfcb, true);
-            this.perfcb.FormattingEnabled = true;
-            this.perfcb.ItemHeight = 15;
-            this.perfcb.Items.AddRange(new object[] {
-            this.comboItem1,
-            this.comboItem2});
-            this.perfcb.Location = new System.Drawing.Point(194, 13);
-            this.perfcb.Name = "perfcb";
-            this.perfcb.Size = new System.Drawing.Size(136, 21);
-            this.perfcb.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.perfcb.TabIndex = 4;
-            this.perfcb.WatermarkText = "Choose a Profile";
-            this.perfcb.SelectedIndexChanged += new System.EventHandler(this.perfcb_SelectedIndexChanged);
-            this.perfcb.SelectedValueChanged += new System.EventHandler(this.perfcb_SelectedValueChanged);
-            // 
-            // comboItem1
-            // 
-            this.comboItem1.Text = "High Performance";
-            // 
-            // comboItem2
-            // 
-            this.comboItem2.Text = "Default";
-            // 
-            // labelX2
-            // 
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(3, 42);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.SingleLineColor = System.Drawing.Color.LightBlue;
-            this.labelX2.Size = new System.Drawing.Size(185, 23);
-            this.labelX2.Symbol = "";
-            this.labelX2.SymbolSize = 15F;
-            this.labelX2.TabIndex = 49;
-            this.labelX2.Text = " Shrink Resolution";
-            // 
-            // shrinktrack
-            // 
-            this.shrinktrack.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
-            this.shrinktrack.DrawBackground = true;
-            this.shrinktrack.Enabled = false;
-            this.shrinktrack.Location = new System.Drawing.Point(194, 42);
-            this.shrinktrack.Maximum = 100;
-            this.shrinktrack.Minimum = 10;
-            this.shrinktrack.Name = "shrinktrack";
-            this.shrinktrack.Size = new System.Drawing.Size(135, 27);
-            this.shrinktrack.TabIndex = 37;
-            this.shrinktrack.Value = 100;
-            this.shrinktrack.ValueChanged += new System.EventHandler(this.shrinktrack_ValueChanged);
-            // 
-            // shrinklbl
-            // 
-            this.shrinklbl.AutoSize = true;
-            this.shrinklbl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.SetFlowBreak(this.shrinklbl, true);
-            this.shrinklbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shrinklbl.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.shrinklbl.Location = new System.Drawing.Point(335, 39);
-            this.shrinklbl.Name = "shrinklbl";
-            this.shrinklbl.Size = new System.Drawing.Size(45, 33);
-            this.shrinklbl.TabIndex = 38;
-            this.shrinklbl.Text = "100%";
-            this.shrinklbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelX3
-            // 
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.Location = new System.Drawing.Point(3, 75);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.SingleLineColor = System.Drawing.Color.LightBlue;
-            this.labelX3.Size = new System.Drawing.Size(185, 23);
-            this.labelX3.Symbol = "";
-            this.labelX3.SymbolSize = 15F;
-            this.labelX3.TabIndex = 50;
-            this.labelX3.Text = " Splash Screen";
-            // 
-            // splashswitch
-            // 
-            // 
-            // 
-            // 
-            this.splashswitch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.splashswitch.Enabled = false;
-            this.flowLayoutPanel2.SetFlowBreak(this.splashswitch, true);
-            this.splashswitch.Location = new System.Drawing.Point(194, 75);
-            this.splashswitch.Name = "splashswitch";
-            this.splashswitch.Size = new System.Drawing.Size(66, 22);
-            this.splashswitch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.splashswitch.TabIndex = 40;
-            this.splashswitch.ValueChanged += new System.EventHandler(this.splashswitch_ValueChanged);
-            // 
-            // labelX4
-            // 
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.Location = new System.Drawing.Point(3, 104);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.SingleLineColor = System.Drawing.Color.LightBlue;
-            this.labelX4.Size = new System.Drawing.Size(185, 23);
-            this.labelX4.Symbol = "";
-            this.labelX4.SymbolSize = 15F;
-            this.labelX4.TabIndex = 51;
-            this.labelX4.Text = " Disable Intro Movies";
-            // 
-            // introswitch
-            // 
-            // 
-            // 
-            // 
-            this.introswitch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.introswitch.Enabled = false;
-            this.flowLayoutPanel2.SetFlowBreak(this.introswitch, true);
-            this.introswitch.Location = new System.Drawing.Point(194, 104);
-            this.introswitch.Name = "introswitch";
-            this.introswitch.Size = new System.Drawing.Size(66, 22);
-            this.introswitch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.introswitch.TabIndex = 42;
-            this.introswitch.ValueChanged += new System.EventHandler(this.introswitch_ValueChanged);
-            // 
-            // labelX5
-            // 
-            // 
-            // 
-            // 
-            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX5.Location = new System.Drawing.Point(3, 133);
-            this.labelX5.Name = "labelX5";
-            this.labelX5.SingleLineColor = System.Drawing.Color.LightBlue;
-            this.labelX5.Size = new System.Drawing.Size(185, 23);
-            this.labelX5.Symbol = "";
-            this.labelX5.SymbolSize = 15F;
-            this.labelX5.TabIndex = 52;
-            this.labelX5.Text = " Disable Hidden Effects";
-            // 
-            // effectswitch
-            // 
-            // 
-            // 
-            // 
-            this.effectswitch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.effectswitch.Enabled = false;
-            this.effectswitch.Location = new System.Drawing.Point(194, 133);
-            this.effectswitch.Name = "effectswitch";
-            this.effectswitch.Size = new System.Drawing.Size(66, 22);
-            this.effectswitch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.effectswitch.TabIndex = 44;
-            this.effectswitch.ValueChanged += new System.EventHandler(this.effectswitch_ValueChanged);
-            // 
-            // efconfig
-            // 
-            this.efconfig.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.efconfig.Enabled = false;
-            this.flowLayoutPanel2.SetFlowBreak(this.efconfig, true);
-            this.efconfig.Image = global::DE_Sensei.Properties.Resources.gear;
-            this.efconfig.Location = new System.Drawing.Point(266, 133);
-            this.efconfig.Name = "efconfig";
-            this.efconfig.Size = new System.Drawing.Size(22, 22);
-            this.efconfig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.efconfig.TabIndex = 47;
-            this.efconfig.TabStop = false;
-            this.efconfig.Click += new System.EventHandler(this.efconfig_Click);
-            this.efconfig.MouseLeave += new System.EventHandler(this.efconfig_MouseLeave);
-            this.efconfig.MouseHover += new System.EventHandler(this.efconfig_MouseHover);
-            // 
-            // labelX10
-            // 
-            // 
-            // 
-            // 
-            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX10.Location = new System.Drawing.Point(3, 162);
-            this.labelX10.Name = "labelX10";
-            this.labelX10.SingleLineColor = System.Drawing.Color.LightBlue;
-            this.labelX10.Size = new System.Drawing.Size(185, 23);
-            this.labelX10.Symbol = "";
-            this.labelX10.SymbolSize = 15F;
-            this.labelX10.TabIndex = 56;
-            this.labelX10.Text = " Disable Menu Effects";
-            // 
-            // menueff
-            // 
-            // 
-            // 
-            // 
-            this.menueff.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.menueff.Enabled = false;
-            this.flowLayoutPanel2.SetFlowBreak(this.menueff, true);
-            this.menueff.Location = new System.Drawing.Point(194, 162);
-            this.menueff.Name = "menueff";
-            this.menueff.Size = new System.Drawing.Size(66, 22);
-            this.menueff.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.menueff.TabIndex = 55;
-            this.menueff.ValueChanged += new System.EventHandler(this.menueff_ValueChanged);
-            // 
-            // labelX11
-            // 
-            // 
-            // 
-            // 
-            this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX11.Location = new System.Drawing.Point(3, 191);
-            this.labelX11.Name = "labelX11";
-            this.labelX11.SingleLineColor = System.Drawing.Color.LightBlue;
-            this.labelX11.Size = new System.Drawing.Size(185, 23);
-            this.labelX11.Symbol = "";
-            this.labelX11.SymbolSize = 15F;
-            this.labelX11.TabIndex = 58;
-            this.labelX11.Text = " Game Power Settings";
-            // 
-            // powerSTATE
-            // 
-            this.powerSTATE.BackColor = System.Drawing.Color.LightGreen;
-            this.powerSTATE.CanvasColor = System.Drawing.SystemColors.Control;
-            this.powerSTATE.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.powerSTATE.ColorTable = DevComponents.DotNetBar.Controls.ePanelColorTable.Red;
-            this.powerSTATE.Controls.Add(this.highPERFORMANCE);
-            this.powerSTATE.Controls.Add(this.powerSAVING);
-            this.powerSTATE.DisabledBackColor = System.Drawing.Color.Empty;
-            this.powerSTATE.DrawTitleBox = false;
-            this.powerSTATE.Enabled = false;
-            this.flowLayoutPanel2.SetFlowBreak(this.powerSTATE, true);
-            this.powerSTATE.Location = new System.Drawing.Point(194, 191);
-            this.powerSTATE.Name = "powerSTATE";
-            this.powerSTATE.Size = new System.Drawing.Size(238, 29);
-            // 
-            // 
-            // 
-            this.powerSTATE.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.powerSTATE.Style.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.powerSTATE.Style.BackColorGradientAngle = 90;
-            this.powerSTATE.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.powerSTATE.Style.BorderBottomWidth = 1;
-            this.powerSTATE.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(55)))), ((int)(((byte)(52)))));
-            this.powerSTATE.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.powerSTATE.Style.BorderLeftWidth = 1;
-            this.powerSTATE.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.powerSTATE.Style.BorderRightWidth = 1;
-            this.powerSTATE.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.powerSTATE.Style.BorderTopWidth = 1;
-            this.powerSTATE.Style.CornerDiameter = 4;
-            this.powerSTATE.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.powerSTATE.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.powerSTATE.Style.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
-            this.powerSTATE.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.powerSTATE.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.powerSTATE.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.powerSTATE.TabIndex = 59;
-            // 
-            // highPERFORMANCE
-            // 
-            this.highPERFORMANCE.Location = new System.Drawing.Point(105, 3);
-            this.highPERFORMANCE.Name = "highPERFORMANCE";
-            this.highPERFORMANCE.Size = new System.Drawing.Size(121, 20);
-            this.highPERFORMANCE.TabIndex = 3;
-            this.highPERFORMANCE.Values.Text = "High Performance";
-            this.highPERFORMANCE.CheckedChanged += new System.EventHandler(this.highPERFORMANCE_CheckedChanged);
-            // 
-            // powerSAVING
-            // 
-            this.powerSAVING.Location = new System.Drawing.Point(3, 3);
-            this.powerSAVING.Name = "powerSAVING";
-            this.powerSAVING.Size = new System.Drawing.Size(96, 20);
-            this.powerSAVING.TabIndex = 2;
-            this.powerSAVING.Values.Text = "Power Saving";
-            this.powerSAVING.CheckedChanged += new System.EventHandler(this.powerSAVING_CheckedChanged);
-            // 
-            // labelX7
-            // 
-            // 
-            // 
-            // 
-            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.flowLayoutPanel2.SetFlowBreak(this.labelX7, true);
-            this.labelX7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX7.Location = new System.Drawing.Point(3, 226);
-            this.labelX7.Name = "labelX7";
-            this.labelX7.SingleLineColor = System.Drawing.Color.LightBlue;
-            this.labelX7.Size = new System.Drawing.Size(220, 23);
-            this.labelX7.Symbol = "";
-            this.labelX7.SymbolSize = 15F;
-            this.labelX7.TabIndex = 54;
-            this.labelX7.Text = " Tweak Game Compatibility";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::DE_Sensei.Properties.Resources.deico;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 255);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(21, 20);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 40;
-            this.pictureBox3.TabStop = false;
-            // 
-            // screenopt
-            // 
-            this.screenopt.AutoSize = true;
-            // 
-            // 
-            // 
-            this.screenopt.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.screenopt.Enabled = false;
-            this.screenopt.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.screenopt.Location = new System.Drawing.Point(34, 259);
-            this.screenopt.Margin = new System.Windows.Forms.Padding(7);
-            this.screenopt.Name = "screenopt";
-            this.screenopt.Size = new System.Drawing.Size(202, 16);
-            this.screenopt.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.screenopt.TabIndex = 38;
-            this.screenopt.Text = "Disable Full Screen Optimization";
-            this.screenopt.CheckedChanged += new System.EventHandler(this.screenopt_CheckedChanged);
-            // 
-            // runas
-            // 
-            this.runas.AutoSize = true;
-            // 
-            // 
-            // 
-            this.runas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.runas.Enabled = false;
-            this.runas.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.runas.Location = new System.Drawing.Point(250, 259);
-            this.runas.Margin = new System.Windows.Forms.Padding(7);
-            this.runas.Name = "runas";
-            this.runas.Size = new System.Drawing.Size(100, 16);
-            this.runas.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.runas.TabIndex = 37;
-            this.runas.Text = "Run As Admin";
-            this.runas.CheckedChanged += new System.EventHandler(this.runas_CheckedChanged);
-            // 
-            // dpiscal
-            // 
-            this.dpiscal.AutoSize = true;
-            // 
-            // 
-            // 
-            this.dpiscal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dpiscal.Enabled = false;
-            this.flowLayoutPanel2.SetFlowBreak(this.dpiscal, true);
-            this.dpiscal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.dpiscal.Location = new System.Drawing.Point(364, 259);
-            this.dpiscal.Margin = new System.Windows.Forms.Padding(7);
-            this.dpiscal.Name = "dpiscal";
-            this.dpiscal.Size = new System.Drawing.Size(123, 16);
-            this.dpiscal.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dpiscal.TabIndex = 39;
-            this.dpiscal.Text = "Override High DPI";
-            this.dpiscal.CheckedChanged += new System.EventHandler(this.dpiscal_CheckedChanged);
-            // 
-            // superTabItem1
-            // 
-            this.superTabItem1.AttachedControl = this.superTabControlPanel1;
-            this.superTabItem1.GlobalItem = false;
-            this.superTabItem1.Image = global::DE_Sensei.Properties.Resources.speedometer;
-            this.superTabItem1.Name = "superTabItem1";
-            this.superTabItem1.Text = "Boost Performance";
-            // 
             // superTabControlPanel3
             // 
             this.superTabControlPanel3.Controls.Add(this.flowLayoutPanel4);
@@ -781,22 +345,6 @@ namespace DE_Sensei
             this.flowLayoutPanel5.Size = new System.Drawing.Size(310, 116);
             this.flowLayoutPanel5.TabIndex = 0;
             // 
-            // openHOTKEYFOLDER
-            // 
-            this.openHOTKEYFOLDER.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.openHOTKEYFOLDER.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.flowLayoutPanel5.SetFlowBreak(this.openHOTKEYFOLDER, true);
-            this.openHOTKEYFOLDER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openHOTKEYFOLDER.Image = global::DE_Sensei.Properties.Resources.open_file;
-            this.openHOTKEYFOLDER.Location = new System.Drawing.Point(3, 3);
-            this.openHOTKEYFOLDER.Name = "openHOTKEYFOLDER";
-            this.openHOTKEYFOLDER.Size = new System.Drawing.Size(180, 31);
-            this.openHOTKEYFOLDER.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
-            this.openHOTKEYFOLDER.TabIndex = 63;
-            this.openHOTKEYFOLDER.Text = "Open Hotkeys Folder";
-            this.openHOTKEYFOLDER.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-            this.openHOTKEYFOLDER.Click += new System.EventHandler(this.openHOTKEYFOLDER_Click);
-            // 
             // importHOTKEYFILE
             // 
             this.importHOTKEYFILE.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -812,6 +360,22 @@ namespace DE_Sensei
             this.importHOTKEYFILE.Text = "Import Hotkey File (*.hki)";
             this.importHOTKEYFILE.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
             this.importHOTKEYFILE.Click += new System.EventHandler(this.importHOTKEYFILE_Click);
+            // 
+            // openHOTKEYFOLDER
+            // 
+            this.openHOTKEYFOLDER.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.openHOTKEYFOLDER.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.flowLayoutPanel5.SetFlowBreak(this.openHOTKEYFOLDER, true);
+            this.openHOTKEYFOLDER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openHOTKEYFOLDER.Image = global::DE_Sensei.Properties.Resources.open_file;
+            this.openHOTKEYFOLDER.Location = new System.Drawing.Point(3, 3);
+            this.openHOTKEYFOLDER.Name = "openHOTKEYFOLDER";
+            this.openHOTKEYFOLDER.Size = new System.Drawing.Size(180, 31);
+            this.openHOTKEYFOLDER.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.openHOTKEYFOLDER.TabIndex = 63;
+            this.openHOTKEYFOLDER.Text = "Open Hotkeys Folder";
+            this.openHOTKEYFOLDER.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+            this.openHOTKEYFOLDER.Click += new System.EventHandler(this.openHOTKEYFOLDER_Click);
             // 
             // labelX13
             // 
@@ -1110,6 +674,477 @@ namespace DE_Sensei
             this.Additional.Name = "Additional";
             this.Additional.Text = "Additional";
             this.Additional.Click += new System.EventHandler(this.Additional_Click);
+            // 
+            // superTabControlPanel1
+            // 
+            this.superTabControlPanel1.Controls.Add(this.flowLayoutPanel2);
+            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 38);
+            this.superTabControlPanel1.Name = "superTabControlPanel1";
+            this.superTabControlPanel1.Size = new System.Drawing.Size(495, 335);
+            this.superTabControlPanel1.TabIndex = 1;
+            this.superTabControlPanel1.TabItem = this.superTabItem1;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel2.Controls.Add(this.labelX1);
+            this.flowLayoutPanel2.Controls.Add(this.perfcb);
+            this.flowLayoutPanel2.Controls.Add(this.labelX2);
+            this.flowLayoutPanel2.Controls.Add(this.shrinktrack);
+            this.flowLayoutPanel2.Controls.Add(this.shrinklbl);
+            this.flowLayoutPanel2.Controls.Add(this.labelX3);
+            this.flowLayoutPanel2.Controls.Add(this.splashswitch);
+            this.flowLayoutPanel2.Controls.Add(this.labelX4);
+            this.flowLayoutPanel2.Controls.Add(this.introswitch);
+            this.flowLayoutPanel2.Controls.Add(this.labelX5);
+            this.flowLayoutPanel2.Controls.Add(this.effectswitch);
+            this.flowLayoutPanel2.Controls.Add(this.efconfig);
+            this.flowLayoutPanel2.Controls.Add(this.labelX10);
+            this.flowLayoutPanel2.Controls.Add(this.menueff);
+            this.flowLayoutPanel2.Controls.Add(this.labelX15);
+            this.flowLayoutPanel2.Controls.Add(this.winDEFENDER);
+            this.flowLayoutPanel2.Controls.Add(this.labelX11);
+            this.flowLayoutPanel2.Controls.Add(this.powerSTATE);
+            this.flowLayoutPanel2.Controls.Add(this.labelX7);
+            this.flowLayoutPanel2.Controls.Add(this.pictureBox3);
+            this.flowLayoutPanel2.Controls.Add(this.screenopt);
+            this.flowLayoutPanel2.Controls.Add(this.runas);
+            this.flowLayoutPanel2.Controls.Add(this.dpiscal);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(495, 335);
+            this.flowLayoutPanel2.TabIndex = 0;
+            // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX1.Location = new System.Drawing.Point(3, 13);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.SingleLineColor = System.Drawing.Color.LightBlue;
+            this.labelX1.Size = new System.Drawing.Size(185, 23);
+            this.labelX1.Symbol = "";
+            this.labelX1.SymbolSize = 15F;
+            this.labelX1.TabIndex = 48;
+            this.labelX1.Text = " Graphics Profiles";
+            // 
+            // perfcb
+            // 
+            this.perfcb.DisplayMember = "Text";
+            this.perfcb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.perfcb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.perfcb.Enabled = false;
+            this.flowLayoutPanel2.SetFlowBreak(this.perfcb, true);
+            this.perfcb.FormattingEnabled = true;
+            this.perfcb.ItemHeight = 15;
+            this.perfcb.Items.AddRange(new object[] {
+            this.comboItem1,
+            this.comboItem2});
+            this.perfcb.Location = new System.Drawing.Point(194, 13);
+            this.perfcb.Name = "perfcb";
+            this.perfcb.Size = new System.Drawing.Size(136, 21);
+            this.perfcb.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.perfcb.TabIndex = 4;
+            this.perfcb.WatermarkText = "Choose a Profile";
+            this.perfcb.SelectedIndexChanged += new System.EventHandler(this.perfcb_SelectedIndexChanged);
+            this.perfcb.SelectedValueChanged += new System.EventHandler(this.perfcb_SelectedValueChanged);
+            // 
+            // comboItem1
+            // 
+            this.comboItem1.Text = "High Performance";
+            // 
+            // comboItem2
+            // 
+            this.comboItem2.Text = "Default";
+            // 
+            // labelX2
+            // 
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX2.Location = new System.Drawing.Point(3, 42);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.SingleLineColor = System.Drawing.Color.LightBlue;
+            this.labelX2.Size = new System.Drawing.Size(185, 23);
+            this.labelX2.Symbol = "";
+            this.labelX2.SymbolSize = 15F;
+            this.labelX2.TabIndex = 49;
+            this.labelX2.Text = " Shrink Resolution";
+            // 
+            // shrinktrack
+            // 
+            this.shrinktrack.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.shrinktrack.DrawBackground = true;
+            this.shrinktrack.Enabled = false;
+            this.shrinktrack.Location = new System.Drawing.Point(194, 42);
+            this.shrinktrack.Maximum = 100;
+            this.shrinktrack.Minimum = 10;
+            this.shrinktrack.Name = "shrinktrack";
+            this.shrinktrack.Size = new System.Drawing.Size(135, 27);
+            this.shrinktrack.TabIndex = 37;
+            this.shrinktrack.Value = 100;
+            this.shrinktrack.ValueChanged += new System.EventHandler(this.shrinktrack_ValueChanged);
+            // 
+            // shrinklbl
+            // 
+            this.shrinklbl.AutoSize = true;
+            this.shrinklbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.SetFlowBreak(this.shrinklbl, true);
+            this.shrinklbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shrinklbl.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.shrinklbl.Location = new System.Drawing.Point(335, 39);
+            this.shrinklbl.Name = "shrinklbl";
+            this.shrinklbl.Size = new System.Drawing.Size(45, 33);
+            this.shrinklbl.TabIndex = 38;
+            this.shrinklbl.Text = "100%";
+            this.shrinklbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelX3
+            // 
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX3.Location = new System.Drawing.Point(3, 75);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.SingleLineColor = System.Drawing.Color.LightBlue;
+            this.labelX3.Size = new System.Drawing.Size(185, 23);
+            this.labelX3.Symbol = "";
+            this.labelX3.SymbolSize = 15F;
+            this.labelX3.TabIndex = 50;
+            this.labelX3.Text = " Splash Screen";
+            // 
+            // splashswitch
+            // 
+            // 
+            // 
+            // 
+            this.splashswitch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.splashswitch.Enabled = false;
+            this.flowLayoutPanel2.SetFlowBreak(this.splashswitch, true);
+            this.splashswitch.Location = new System.Drawing.Point(194, 75);
+            this.splashswitch.Name = "splashswitch";
+            this.splashswitch.Size = new System.Drawing.Size(66, 22);
+            this.splashswitch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.splashswitch.TabIndex = 40;
+            this.splashswitch.ValueChanged += new System.EventHandler(this.splashswitch_ValueChanged);
+            // 
+            // labelX4
+            // 
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX4.Location = new System.Drawing.Point(3, 104);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.SingleLineColor = System.Drawing.Color.LightBlue;
+            this.labelX4.Size = new System.Drawing.Size(185, 23);
+            this.labelX4.Symbol = "";
+            this.labelX4.SymbolSize = 15F;
+            this.labelX4.TabIndex = 51;
+            this.labelX4.Text = " Disable Intro Movies";
+            // 
+            // introswitch
+            // 
+            // 
+            // 
+            // 
+            this.introswitch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.introswitch.Enabled = false;
+            this.flowLayoutPanel2.SetFlowBreak(this.introswitch, true);
+            this.introswitch.Location = new System.Drawing.Point(194, 104);
+            this.introswitch.Name = "introswitch";
+            this.introswitch.Size = new System.Drawing.Size(66, 22);
+            this.introswitch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.introswitch.TabIndex = 42;
+            this.introswitch.ValueChanged += new System.EventHandler(this.introswitch_ValueChanged);
+            // 
+            // labelX5
+            // 
+            // 
+            // 
+            // 
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX5.Location = new System.Drawing.Point(3, 133);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.SingleLineColor = System.Drawing.Color.LightBlue;
+            this.labelX5.Size = new System.Drawing.Size(185, 23);
+            this.labelX5.Symbol = "";
+            this.labelX5.SymbolSize = 15F;
+            this.labelX5.TabIndex = 52;
+            this.labelX5.Text = " Disable Hidden Effects";
+            // 
+            // effectswitch
+            // 
+            // 
+            // 
+            // 
+            this.effectswitch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.effectswitch.Enabled = false;
+            this.effectswitch.Location = new System.Drawing.Point(194, 133);
+            this.effectswitch.Name = "effectswitch";
+            this.effectswitch.Size = new System.Drawing.Size(66, 22);
+            this.effectswitch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.effectswitch.TabIndex = 44;
+            this.effectswitch.ValueChanged += new System.EventHandler(this.effectswitch_ValueChanged);
+            // 
+            // efconfig
+            // 
+            this.efconfig.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.efconfig.Enabled = false;
+            this.flowLayoutPanel2.SetFlowBreak(this.efconfig, true);
+            this.efconfig.Image = global::DE_Sensei.Properties.Resources.gear;
+            this.efconfig.Location = new System.Drawing.Point(266, 133);
+            this.efconfig.Name = "efconfig";
+            this.efconfig.Size = new System.Drawing.Size(22, 22);
+            this.efconfig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.efconfig.TabIndex = 47;
+            this.efconfig.TabStop = false;
+            this.efconfig.Click += new System.EventHandler(this.efconfig_Click);
+            this.efconfig.MouseLeave += new System.EventHandler(this.efconfig_MouseLeave);
+            this.efconfig.MouseHover += new System.EventHandler(this.efconfig_MouseHover);
+            // 
+            // labelX10
+            // 
+            // 
+            // 
+            // 
+            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX10.Location = new System.Drawing.Point(3, 162);
+            this.labelX10.Name = "labelX10";
+            this.labelX10.SingleLineColor = System.Drawing.Color.LightBlue;
+            this.labelX10.Size = new System.Drawing.Size(185, 23);
+            this.labelX10.Symbol = "";
+            this.labelX10.SymbolSize = 15F;
+            this.labelX10.TabIndex = 56;
+            this.labelX10.Text = " Disable Menu Effects";
+            // 
+            // menueff
+            // 
+            // 
+            // 
+            // 
+            this.menueff.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.menueff.Enabled = false;
+            this.flowLayoutPanel2.SetFlowBreak(this.menueff, true);
+            this.menueff.Location = new System.Drawing.Point(194, 162);
+            this.menueff.Name = "menueff";
+            this.menueff.Size = new System.Drawing.Size(66, 22);
+            this.menueff.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.menueff.TabIndex = 55;
+            this.menueff.ValueChanged += new System.EventHandler(this.menueff_ValueChanged);
+            // 
+            // labelX15
+            // 
+            // 
+            // 
+            // 
+            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX15.Location = new System.Drawing.Point(3, 191);
+            this.labelX15.Name = "labelX15";
+            this.labelX15.SingleLineColor = System.Drawing.Color.LightBlue;
+            this.labelX15.Size = new System.Drawing.Size(185, 23);
+            this.labelX15.Symbol = "";
+            this.labelX15.SymbolSize = 15F;
+            this.labelX15.TabIndex = 60;
+            this.labelX15.Text = " Add To WinDefender";
+            // 
+            // winDEFENDER
+            // 
+            // 
+            // 
+            // 
+            this.winDEFENDER.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.winDEFENDER.Enabled = false;
+            this.flowLayoutPanel2.SetFlowBreak(this.winDEFENDER, true);
+            this.winDEFENDER.Location = new System.Drawing.Point(194, 191);
+            this.winDEFENDER.Name = "winDEFENDER";
+            this.winDEFENDER.Size = new System.Drawing.Size(66, 22);
+            this.winDEFENDER.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.winDEFENDER.TabIndex = 61;
+            this.winDEFENDER.ValueChanged += new System.EventHandler(this.winDEFENDER_ValueChanged);
+            // 
+            // labelX11
+            // 
+            // 
+            // 
+            // 
+            this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX11.Location = new System.Drawing.Point(3, 220);
+            this.labelX11.Name = "labelX11";
+            this.labelX11.SingleLineColor = System.Drawing.Color.LightBlue;
+            this.labelX11.Size = new System.Drawing.Size(185, 23);
+            this.labelX11.Symbol = "";
+            this.labelX11.SymbolSize = 15F;
+            this.labelX11.TabIndex = 58;
+            this.labelX11.Text = " Game Power Settings";
+            // 
+            // powerSTATE
+            // 
+            this.powerSTATE.BackColor = System.Drawing.Color.LightGreen;
+            this.powerSTATE.CanvasColor = System.Drawing.SystemColors.Control;
+            this.powerSTATE.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.powerSTATE.ColorTable = DevComponents.DotNetBar.Controls.ePanelColorTable.Red;
+            this.powerSTATE.Controls.Add(this.highPERFORMANCE);
+            this.powerSTATE.Controls.Add(this.powerSAVING);
+            this.powerSTATE.DisabledBackColor = System.Drawing.Color.Empty;
+            this.powerSTATE.DrawTitleBox = false;
+            this.powerSTATE.Enabled = false;
+            this.flowLayoutPanel2.SetFlowBreak(this.powerSTATE, true);
+            this.powerSTATE.Location = new System.Drawing.Point(194, 220);
+            this.powerSTATE.Name = "powerSTATE";
+            this.powerSTATE.Size = new System.Drawing.Size(238, 29);
+            // 
+            // 
+            // 
+            this.powerSTATE.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.powerSTATE.Style.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.powerSTATE.Style.BackColorGradientAngle = 90;
+            this.powerSTATE.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.powerSTATE.Style.BorderBottomWidth = 1;
+            this.powerSTATE.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(55)))), ((int)(((byte)(52)))));
+            this.powerSTATE.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.powerSTATE.Style.BorderLeftWidth = 1;
+            this.powerSTATE.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.powerSTATE.Style.BorderRightWidth = 1;
+            this.powerSTATE.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.powerSTATE.Style.BorderTopWidth = 1;
+            this.powerSTATE.Style.CornerDiameter = 4;
+            this.powerSTATE.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.powerSTATE.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.powerSTATE.Style.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(36)))), ((int)(((byte)(35)))));
+            this.powerSTATE.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.powerSTATE.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.powerSTATE.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.powerSTATE.TabIndex = 59;
+            // 
+            // highPERFORMANCE
+            // 
+            this.highPERFORMANCE.Location = new System.Drawing.Point(105, 3);
+            this.highPERFORMANCE.Name = "highPERFORMANCE";
+            this.highPERFORMANCE.Size = new System.Drawing.Size(121, 20);
+            this.highPERFORMANCE.TabIndex = 3;
+            this.highPERFORMANCE.Values.Text = "High Performance";
+            this.highPERFORMANCE.CheckedChanged += new System.EventHandler(this.highPERFORMANCE_CheckedChanged);
+            // 
+            // powerSAVING
+            // 
+            this.powerSAVING.Location = new System.Drawing.Point(3, 3);
+            this.powerSAVING.Name = "powerSAVING";
+            this.powerSAVING.Size = new System.Drawing.Size(96, 20);
+            this.powerSAVING.TabIndex = 2;
+            this.powerSAVING.Values.Text = "Power Saving";
+            this.powerSAVING.CheckedChanged += new System.EventHandler(this.powerSAVING_CheckedChanged);
+            // 
+            // labelX7
+            // 
+            // 
+            // 
+            // 
+            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.flowLayoutPanel2.SetFlowBreak(this.labelX7, true);
+            this.labelX7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX7.Location = new System.Drawing.Point(3, 255);
+            this.labelX7.Name = "labelX7";
+            this.labelX7.SingleLineColor = System.Drawing.Color.LightBlue;
+            this.labelX7.Size = new System.Drawing.Size(220, 23);
+            this.labelX7.Symbol = "";
+            this.labelX7.SymbolSize = 15F;
+            this.labelX7.TabIndex = 54;
+            this.labelX7.Text = " Tweak Game Compatibility";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DE_Sensei.Properties.Resources.deico;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 284);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 40;
+            this.pictureBox3.TabStop = false;
+            // 
+            // screenopt
+            // 
+            this.screenopt.AutoSize = true;
+            // 
+            // 
+            // 
+            this.screenopt.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.screenopt.Enabled = false;
+            this.screenopt.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.screenopt.Location = new System.Drawing.Point(34, 288);
+            this.screenopt.Margin = new System.Windows.Forms.Padding(7);
+            this.screenopt.Name = "screenopt";
+            this.screenopt.Size = new System.Drawing.Size(202, 16);
+            this.screenopt.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.screenopt.TabIndex = 38;
+            this.screenopt.Text = "Disable Full Screen Optimization";
+            this.screenopt.CheckedChanged += new System.EventHandler(this.screenopt_CheckedChanged);
+            // 
+            // runas
+            // 
+            this.runas.AutoSize = true;
+            // 
+            // 
+            // 
+            this.runas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.runas.Enabled = false;
+            this.runas.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.runas.Location = new System.Drawing.Point(250, 288);
+            this.runas.Margin = new System.Windows.Forms.Padding(7);
+            this.runas.Name = "runas";
+            this.runas.Size = new System.Drawing.Size(100, 16);
+            this.runas.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.runas.TabIndex = 37;
+            this.runas.Text = "Run As Admin";
+            this.runas.CheckedChanged += new System.EventHandler(this.runas_CheckedChanged);
+            // 
+            // dpiscal
+            // 
+            this.dpiscal.AutoSize = true;
+            // 
+            // 
+            // 
+            this.dpiscal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dpiscal.Enabled = false;
+            this.flowLayoutPanel2.SetFlowBreak(this.dpiscal, true);
+            this.dpiscal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.dpiscal.Location = new System.Drawing.Point(364, 288);
+            this.dpiscal.Margin = new System.Windows.Forms.Padding(7);
+            this.dpiscal.Name = "dpiscal";
+            this.dpiscal.Size = new System.Drawing.Size(123, 16);
+            this.dpiscal.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dpiscal.TabIndex = 39;
+            this.dpiscal.Text = "Override High DPI";
+            this.dpiscal.CheckedChanged += new System.EventHandler(this.dpiscal_CheckedChanged);
+            // 
+            // superTabItem1
+            // 
+            this.superTabItem1.AttachedControl = this.superTabControlPanel1;
+            this.superTabItem1.GlobalItem = false;
+            this.superTabItem1.Image = global::DE_Sensei.Properties.Resources.speedometer;
+            this.superTabItem1.Name = "superTabItem1";
+            this.superTabItem1.Text = "Boost Performance";
             // 
             // superTabControlPanel2
             // 
@@ -1414,13 +1449,6 @@ namespace DE_Sensei
             ((System.ComponentModel.ISupportInitialize)(this.steamSTATUS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);
-            this.superTabControlPanel1.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.efconfig)).EndInit();
-            this.powerSTATE.ResumeLayout(false);
-            this.powerSTATE.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.superTabControlPanel3.ResumeLayout(false);
             this.superTabControlPanel3.PerformLayout();
             this.flowLayoutPanel4.ResumeLayout(false);
@@ -1428,6 +1456,13 @@ namespace DE_Sensei
             this.flowLayoutPanel5.ResumeLayout(false);
             this.improvGROUP.ResumeLayout(false);
             this.flowLayoutPanel6.ResumeLayout(false);
+            this.superTabControlPanel1.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efconfig)).EndInit();
+            this.powerSTATE.ResumeLayout(false);
+            this.powerSTATE.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.superTabControlPanel2.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
@@ -1518,5 +1553,7 @@ namespace DE_Sensei
         private DevComponents.DotNetBar.ButtonX applyEXP;
         private DevComponents.DotNetBar.LabelX zoomPERC;
         private DevComponents.DotNetBar.Controls.CheckBoxX steamRESTART;
+        private DevComponents.DotNetBar.LabelX labelX15;
+        private DevComponents.DotNetBar.Controls.SwitchButton winDEFENDER;
     }
 }

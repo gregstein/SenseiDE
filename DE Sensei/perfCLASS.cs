@@ -129,6 +129,9 @@ namespace DE_Sensei
 
                 if ((Registry.GetValue(key.Name, "Game Power", "")) == null)
                     key.SetValue("Game Power", 0, Microsoft.Win32.RegistryValueKind.DWord);
+
+                if ((Registry.GetValue(key.Name, "WinDef", "")) == null)
+                    key.SetValue("WinDef", 0, Microsoft.Win32.RegistryValueKind.DWord);
                 return true;
             }
             
