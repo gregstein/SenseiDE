@@ -464,7 +464,7 @@ namespace DE_Sensei
             this.MaximumSize = new Size(_sw, _sh);
             //byte[] test = File.ReadAllBytes(@"C:\Users\shock\Games\Age of Empires 2 DE\76561198079200175\profile\Player").Skip(0x17).Take(150).ToArray();
             //MessageBox.Show(System.Text.Encoding.UTF8.GetString(test));
-            Decompress(new FileInfo(@"C:\Users\shock\Games\Age of Empires 2 DE\76561198079200175\profile\AdditionalOptions.aop"));
+            //Decompress(new FileInfo(@"C:\Users\shock\Games\Age of Empires 2 DE\76561198079200175\profile\AdditionalOptions.aop"));
             //pf.HKIwriter(@"C:\Users\shock\Games\Age of Empires 2 DE\76561198079200175\profile\PlayerDefault");
 
 
