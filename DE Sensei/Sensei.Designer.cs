@@ -230,8 +230,8 @@ namespace DE_Sensei
             this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
-            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
             this.superTabControl1.Controls.Add(this.superTabControlPanel3);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
             this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.flowLayoutPanel1.SetFlowBreak(this.superTabControl1, true);
             this.superTabControl1.Location = new System.Drawing.Point(3, 34);
@@ -1031,6 +1031,7 @@ namespace DE_Sensei
             this.zoomSLIDER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zoomSLIDER.LabelWidth = 90;
             this.zoomSLIDER.Location = new System.Drawing.Point(3, 45);
+            this.zoomSLIDER.Maximum = 200;
             this.zoomSLIDER.Name = "zoomSLIDER";
             this.zoomSLIDER.Size = new System.Drawing.Size(221, 23);
             this.zoomSLIDER.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1216,6 +1217,7 @@ namespace DE_Sensei
             // 
             this.listsubmitee.BackgroundStyle.Class = "ListBoxAdv";
             this.listsubmitee.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.listsubmitee.CheckStateMember = null;
             this.listsubmitee.ContainerControlProcessDialogKey = true;
             this.listsubmitee.DragDropSupport = true;
             this.flowLayoutPanel3.SetFlowBreak(this.listsubmitee, true);

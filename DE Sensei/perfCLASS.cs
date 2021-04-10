@@ -149,11 +149,13 @@ namespace DE_Sensei
         public bool KidsHERE()
         {
             RegistryKey kidnames = Registry.CurrentUser.OpenSubKey(@"Software\SenseiDE", true);
+            kidnames.Close();
             return (kidnames.GetValueNames().Count() == 6);
         }
         public bool senseiEXISTS()
         {
             RegistryKey SensKey = Registry.CurrentUser.OpenSubKey(@"Software\SenseiDE", true);
+            SensKey.Close();
             return (SensKey != null);
         }
         public void SenseiREG(string Keyname, object Value, RegistryValueKind Regtype)
@@ -239,6 +241,7 @@ namespace DE_Sensei
             {
                 reg.SetValue(gamepath, "");
             }
+            localMachine.Close();
         }
         public bool CheckGamePower(string gameEXEpath)
         {
@@ -257,6 +260,7 @@ namespace DE_Sensei
                 else if ((string)reg.GetValue(gameEXEpath) == "GpuPreference=2;")
                     return true;
             }
+            localMachine.Close();
             return false;
         }
         public void RetSETTINGS4(string RegKeyvalue, DevComponents.DotNetBar.Controls.CheckBoxX CB, string CBvalue)

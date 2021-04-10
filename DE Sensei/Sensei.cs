@@ -1314,8 +1314,10 @@ namespace DE_Sensei
                 var process = Process.GetProcessesByName("steam")[0];
                 process.Kill();
                 var path = process.MainModule.FileName;
+                process.Close();
                 RunAsDesktopUser(path);
                 //Process.Start(path);
+
                 this.Close();
 
             }
@@ -1649,6 +1651,7 @@ namespace DE_Sensei
                 process.Kill();
                 var path = process.MainModule.FileName;
                 Process.Start(path);
+                
                 Application.Exit();
             }
             //Recommend Steam restart
@@ -1682,6 +1685,8 @@ namespace DE_Sensei
             startInfo.Verb = "runas";
             process.StartInfo = startInfo;
             process.Start();
+            process.WaitForExit();
+            process.Close();
         }
         private void winDEFENDER_ValueChanged(object sender, EventArgs e)
         {
