@@ -26,8 +26,14 @@ Things you can do with Sensei DE
 - Manage Hotkeys (Install, Set default profile)
 
 
-## Live Demo (Youtube)
+## Live Demos (Youtube)
+Method 1 (Demo)
+
 [![Improve Age of Empires 2 Definitive Edition Performance & Responsiveness](https://img.youtube.com/vi/WJIC8_myxi4/0.jpg)](https://www.youtube.com/watch?v=WJIC8_myxi4)
+
+Method 2 (Demo)
+
+[![Improved AoE2 DE Performance by +218 Benchmark Points ✔️2021](https://img.youtube.com/vi/2jIdFZiW1YY/0.jpg)](https://www.youtube.com/watch?v=2jIdFZiW1YY)
 
 ## Support
 
