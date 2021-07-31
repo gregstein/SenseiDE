@@ -8,7 +8,8 @@
 [![GitHub forks](https://img.shields.io/github/forks/gregstein/SenseiDE.svg)](https://github.com/gregstein/SenseiDE/network)
 
 **Unleash The Ultimate Performance from Age of Empires 2 Definitive with the help of SenSei DE.**
-<img src="https://user-images.githubusercontent.com/16618729/113511984-71933480-955a-11eb-9545-d5d6cc18c98b.jpg" width="450" >
+<img src="https://user-images.githubusercontent.com/16618729/127754601-e1411a91-f7bc-433c-ab93-d13f73a0ed7c.jpg" width="450" >
+
 
 Things you can do with Sensei DE
 
@@ -24,7 +25,8 @@ Things you can do with Sensei DE
 - Game Power Settings.
 - Optimal Windows Compatibility Settings
 - Manage Hotkeys (Install, Set default profile)
-
+- Add Custom Game Path (Steam is not required to use Sensei DE)
+- Manually Change Steam ID (Is responsible for mods managements and personal hotkeys/profile changes)
 
 ## Live Demos (Youtube)
 Method 1 (Demo)
@@ -41,3 +43,11 @@ Show Love❤️?
 [![Donate to project](https://i.imgur.com/MLApSEv.png)](https://streamlabs.com/gregstein_)
 
 Donators can request any features in the scoop of the project and will be added to the Hall of Fame of Sensei DE.
+
+## Privacy & Copyright Infringement
+
+- Sensei DE is neither affiliated with Microsoft nor uses any assets from Age of Empires 2 DE. 
+- Sensei DE is neither responsible for any illegal usage nor provide support to pirated game copies.
+- Sensei DE is completely free and do not exchange or share anything about you or your computer (ZERO Data Collection)
+
+
